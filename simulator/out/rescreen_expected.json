@@ -1,0 +1,29 @@
+{
+ "true_hits": [
+  {
+   "customer_id": "CUS-00043",
+   "person": "Ingrid de Vries",
+   "entry_id": "DSL-0031",
+   "match": "exact"
+  },
+  {
+   "customer_id": "CUS-00036",
+   "person": "Wei Sharma",
+   "entry_id": "DSL-0032",
+   "match": "exact"
+  },
+  {
+   "customer_id": "CUS-00069",
+   "person": "Michail Twerdochlebow",
+   "entry_id": "DSL-0033",
+   "match": "transliterated"
+  }
+ ],
+ "false_positives": [
+  {
+   "customer_id": "CUS-00038",
+   "person": "Samuel Mitchell",
+   "entry_id": "DSL-0034"
+  }
+ ]
+}

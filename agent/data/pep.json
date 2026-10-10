@@ -1,0 +1,242 @@
+[
+ {
+  "pep_id": "PEP-0001",
+  "name": "Horacio Ardenne-Vos",
+  "dob": "1959-10-16",
+  "nationality": "ES",
+  "position": "Regional Governor",
+  "since": 2023
+ },
+ {
+  "pep_id": "PEP-0002",
+  "name": "Dario Halvorsrud",
+  "dob": "1967-07-16",
+  "nationality": "IE",
+  "position": "Deputy Minister of Finance",
+  "since": 2014
+ },
+ {
+  "pep_id": "PEP-0003",
+  "name": "Horacio Halvorsrud",
+  "dob": "1974-08-25",
+  "nationality": "ES",
+  "position": "Regional Governor",
+  "since": 2025
+ },
+ {
+  "pep_id": "PEP-0004",
+  "name": "Gwen Ferreira Lobo",
+  "dob": "1974-09-06",
+  "nationality": "ES",
+  "position": "Mayor",
+  "since": 2017
+ },
+ {
+  "pep_id": "PEP-0005",
+  "name": "Kirsten Achterberg",
+  "dob": "1967-01-25",
+  "nationality": "FR",
+  "position": "Regional Governor",
+  "since": 2013
+ },
+ {
+  "pep_id": "PEP-0006",
+  "name": "Cecilia Brannagh",
+  "dob": "1960-05-28",
+  "nationality": "FR",
+  "position": "Member of Parliament",
+  "since": 2019
+ },
+ {
+  "pep_id": "PEP-0007",
+  "name": "Nils Nwachukwu-Ibe",
+  "dob": "1958-03-07",
+  "nationality": "ES",
+  "position": "Supreme Court Judge",
+  "since": 2012
+ },
+ {
+  "pep_id": "PEP-0008",
+  "name": "Cecilia Halvorsrud",
+  "dob": "1973-12-24",
+  "nationality": "IT",
+  "position": "Board Member, State Development Bank",
+  "since": 2014
+ },
+ {
+  "pep_id": "PEP-0009",
+  "name": "Lorenzo Ferreira Lobo",
+  "dob": "1973-02-14",
+  "nationality": "NG",
+  "position": "Member of Parliament",
+  "since": 2019
+ },
+ {
+  "pep_id": "PEP-0010",
+  "name": "Odile Ferreira Lobo",
+  "dob": "1980-07-12",
+  "nationality": "BR",
+  "position": "Mayor",
+  "since": 2018
+ },
+ {
+  "pep_id": "PEP-0011",
+  "name": "Gwen Halvorsrud",
+  "dob": "1954-08-24",
+  "nationality": "IE",
+  "position": "Mayor",
+  "since": 2012
+ },
+ {
+  "pep_id": "PEP-0012",
+  "name": "Dario Tullamore",
+  "dob": "1959-05-14",
+  "nationality": "IE",
+  "position": "Regional Governor",
+  "since": 2013
+ },
+ {
+  "pep_id": "PEP-0013",
+  "name": "Fabian Nwachukwu-Ibe",
+  "dob": "1952-05-11",
+  "nationality": "GB",
+  "position": "Member of Parliament",
+  "since": 2021
+ },
+ {
+  "pep_id": "PEP-0014",
+  "name": "Cecilia Delcourt",
+  "dob": "1954-07-21",
+  "nationality": "IT",
+  "position": "Member of Parliament",
+  "since": 2013
+ },
+ {
+  "pep_id": "PEP-0015",
+  "name": "Nils Oyelaran",
+  "dob": "1977-07-18",
+  "nationality": "NL",
+  "position": "Regional Governor",
+  "since": 2022
+ },
+ {
+  "pep_id": "PEP-0016",
+  "name": "Elin Sundqvist-Ek",
+  "dob": "1977-01-06",
+  "nationality": "IT",
+  "position": "Chief Executive, State-Owned Energy Company",
+  "since": 2013
+ },
+ {
+  "pep_id": "PEP-0017",
+  "name": "Bruno Ferreira Lobo",
+  "dob": "1971-11-23",
+  "nationality": "IE",
+  "position": "Chief Executive, State-Owned Energy Company",
+  "since": 2019
+ },
+ {
+  "pep_id": "PEP-0018",
+  "name": "Elin Tullamore",
+  "dob": "1956-06-19",
+  "nationality": "GB",
+  "position": "Board Member, State Development Bank",
+  "since": 2023
+ },
+ {
+  "pep_id": "PEP-0019",
+  "name": "Elin Quintanar",
+  "dob": "1957-03-30",
+  "nationality": "BR",
+  "position": "Member of Parliament",
+  "since": 2015
+ },
+ {
+  "pep_id": "PEP-0020",
+  "name": "Ines Sundqvist-Ek",
+  "dob": "1956-07-29",
+  "nationality": "BR",
+  "position": "Member of Parliament",
+  "since": 2024
+ },
+ {
+  "pep_id": "PEP-0021",
+  "name": "Ines Castellvi",
+  "dob": "1978-11-03",
+  "nationality": "GB",
+  "position": "Supreme Court Judge",
+  "since": 2020
+ },
+ {
+  "pep_id": "PEP-0022",
+  "name": "Fabian Achterberg",
+  "dob": "1957-06-29",
+  "nationality": "IT",
+  "position": "Ambassador",
+  "since": 2020
+ },
+ {
+  "pep_id": "PEP-0023",
+  "name": "Ines Varga-Simic",
+  "dob": "1972-07-20",
+  "nationality": "IT",
+  "position": "Ambassador",
+  "since": 2021
+ },
+ {
+  "pep_id": "PEP-0024",
+  "name": "Marisol Varga-Simic",
+  "dob": "1958-10-03",
+  "nationality": "FR",
+  "position": "Mayor",
+  "since": 2023
+ },
+ {
+  "pep_id": "PEP-0025",
+  "name": "Marisol Oyelaran",
+  "dob": "1958-12-20",
+  "nationality": "BR",
+  "position": "Chief Executive, State-Owned Energy Company",
+  "since": 2017
+ },
+ {
+  "pep_id": "PEP-0026",
+  "name": "Lorenzo Ardenne-Vos",
+  "dob": "1951-04-03",
+  "nationality": "ES",
+  "position": "Chief Executive, State-Owned Energy Company",
+  "since": 2016
+ },
+ {
+  "pep_id": "PEP-0027",
+  "name": "Dario Aldana Roque",
+  "dob": "1977-02-22",
+  "nationality": "IT",
+  "position": "Chief Executive, State-Owned Energy Company",
+  "since": 2024
+ },
+ {
+  "pep_id": "PEP-0028",
+  "name": "Odile Aldana Roque",
+  "dob": "1965-09-05",
+  "nationality": "IT",
+  "position": "Deputy Minister of Finance",
+  "since": 2015
+ },
+ {
+  "pep_id": "PEP-0029",
+  "name": "Bruno Oyelaran",
+  "dob": "1971-02-01",
+  "nationality": "FR",
+  "position": "Board Member, State Development Bank",
+  "since": 2015
+ },
+ {
+  "pep_id": "PEP-0030",
+  "name": "Horacio Nwachukwu-Ibe",
+  "dob": "1977-05-17",
+  "nationality": "US",
+  "position": "Chief Executive, State-Owned Energy Company",
+  "since": 2022
+ }
+]

@@ -1,0 +1,69 @@
+{
+ "seed": 7,
+ "registry_companies": 1652,
+ "sanctions_entries": 30,
+ "peps": 30,
+ "articles": 261,
+ "customers": 150,
+ "sanctions_additions": 6,
+ "golden_v1": {
+  "total": 60,
+  "scenarios": {
+   "clean": 24,
+   "document_mismatch": 9,
+   "pep": 6,
+   "sanctioned_direct": 6,
+   "sanctions_false_positive": 6,
+   "high_risk": 6,
+   "adverse_media": 3
+  },
+  "decisions": {
+   "approve": 30,
+   "enhanced_due_diligence": 24,
+   "reject": 6
+  }
+ },
+ "hard_cases": {
+  "total": 40,
+  "scenarios": {
+   "sanctioned_hidden": 8,
+   "sanctioned_transliterated": 8,
+   "opaque_ownership": 6,
+   "ownership_format": 6,
+   "embedded_instructions": 6,
+   "clean": 6
+  },
+  "decisions": {
+   "reject": 17,
+   "approve": 12,
+   "enhanced_due_diligence": 11
+  }
+ },
+ "traffic_pool": {
+  "total": 1000,
+  "scenarios": {
+   "clean": 510,
+   "document_mismatch": 80,
+   "pep": 70,
+   "sanctions_false_positive": 60,
+   "ownership_format": 50,
+   "sanctioned_hidden": 40,
+   "opaque_ownership": 40,
+   "sanctioned_transliterated": 40,
+   "high_risk": 30,
+   "embedded_instructions": 30,
+   "sanctioned_direct": 30,
+   "adverse_media": 20
+  },
+  "jurisdictions": {
+   "US": 763,
+   "GB": 150,
+   "DE": 87
+  },
+  "decisions": {
+   "approve": 620,
+   "enhanced_due_diligence": 265,
+   "reject": 115
+  }
+ }
+}

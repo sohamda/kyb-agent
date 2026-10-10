@@ -1,0 +1,32 @@
+# Secrets — never commit real API keys.
+.env
+.env.*
+**/.env
+**/.env.*
+
+# Managed Deep Agent build output.
+.mda/
+**/.mda/
+
+# Local LangGraph dev-server state.
+.langgraph_api/
+**/.langgraph_api/
+
+# Python envs / caches.
+.venv/
+**/.venv/
+__pycache__/
+**/__pycache__/
+*.pyc
+
+# Local agent/skill tooling (not part of the deployed agent).
+.agents/
+**/.agents/
+
+# Node.
+node_modules/
+
+# OS / editor junk.
+.DS_Store
+Thumbs.db
+desktop.ini

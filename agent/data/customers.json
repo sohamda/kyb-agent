@@ -1,0 +1,2888 @@
+[
+ {
+  "customer_id": "CUS-00001",
+  "legal_name": "Summit Gate Travel LLC",
+  "jurisdiction": "US",
+  "onboarded_on": "2024-12-08",
+  "persons": [
+   {
+    "name": "Joshua Thornton",
+    "dob": "1986-05-10",
+    "nationality": "US",
+    "role": "director"
+   },
+   {
+    "name": "Freya Hughes",
+    "dob": "1982-03-28",
+    "nationality": "IE",
+    "role": "director"
+   },
+   {
+    "name": "Jonathan Ellison",
+    "dob": "1992-04-24",
+    "nationality": "GB",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00002",
+  "legal_name": "Harbourline Ridge Software Inc.",
+  "jurisdiction": "US",
+  "onboarded_on": "2026-01-19",
+  "persons": [
+   {
+    "name": "Joshua Coleman",
+    "dob": "1992-11-10",
+    "nationality": "IE",
+    "role": "director"
+   },
+   {
+    "name": "Christopher Foster",
+    "dob": "1994-05-02",
+    "nationality": "AU",
+    "role": "ubo"
+   },
+   {
+    "name": "Marco Dubois",
+    "dob": "1973-12-01",
+    "nationality": "JP",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00003",
+  "legal_name": "Juniper Gate Logistics Inc.",
+  "jurisdiction": "US",
+  "onboarded_on": "2024-10-06",
+  "persons": [
+   {
+    "name": "Julia Vogel",
+    "dob": "1960-01-31",
+    "nationality": "DE",
+    "role": "ubo"
+   },
+   {
+    "name": "Zoe Ashford",
+    "dob": "1981-06-01",
+    "nationality": "GB",
+    "role": "director"
+   },
+   {
+    "name": "Jonathan Blackwood",
+    "dob": "1966-05-08",
+    "nationality": "GB",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00004",
+  "legal_name": "Calder Logistics GmbH",
+  "jurisdiction": "DE",
+  "onboarded_on": "2026-01-04",
+  "persons": [
+   {
+    "name": "Sanne Sato",
+    "dob": "1987-10-19",
+    "nationality": "TR",
+    "role": "director"
+   },
+   {
+    "name": "Moritz Wagner",
+    "dob": "1960-05-04",
+    "nationality": "DE",
+    "role": "director"
+   },
+   {
+    "name": "Sofía Horváth",
+    "dob": "1987-03-31",
+    "nationality": "JP",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00005",
+  "legal_name": "Redwood Logistics LLC",
+  "jurisdiction": "US",
+  "onboarded_on": "2025-03-25",
+  "persons": [
+   {
+    "name": "Ruby Reynolds",
+    "dob": "1967-03-19",
+    "nationality": "GB",
+    "role": "ubo"
+   },
+   {
+    "name": "Camille Kapoor",
+    "dob": "1995-09-30",
+    "nationality": "ES",
+    "role": "director"
+   },
+   {
+    "name": "Haruto de Vries",
+    "dob": "1958-10-17",
+    "nationality": "GH",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00006",
+  "legal_name": "Riverbend Hill Media LLC",
+  "jurisdiction": "US",
+  "onboarded_on": "2026-05-18",
+  "persons": [
+   {
+    "name": "Priya Dubois",
+    "dob": "1962-08-12",
+    "nationality": "CN",
+    "role": "ubo"
+   },
+   {
+    "name": "Daniel Holloway",
+    "dob": "1990-01-14",
+    "nationality": "IE",
+    "role": "ubo"
+   },
+   {
+    "name": "Chloé Rossi",
+    "dob": "1969-08-22",
+    "nationality": "BR",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00007",
+  "legal_name": "Beacon Rock Travel LLC",
+  "jurisdiction": "US",
+  "onboarded_on": "2025-01-04",
+  "persons": [
+   {
+    "name": "Julien Adeyemi",
+    "dob": "1964-08-09",
+    "nationality": "JP",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00008",
+  "legal_name": "Westmark Harbor Design LLC",
+  "jurisdiction": "US",
+  "onboarded_on": "2026-08-28",
+  "persons": [
+   {
+    "name": "James Pemberton",
+    "dob": "1989-06-23",
+    "nationality": "US",
+    "role": "ubo"
+   },
+   {
+    "name": "Elif Sharma",
+    "dob": "1965-09-01",
+    "nationality": "SE",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00009",
+  "legal_name": "Fernhill Bay Commerce Inc.",
+  "jurisdiction": "US",
+  "onboarded_on": "2026-06-26",
+  "persons": [
+   {
+    "name": "Isabella Sullivan",
+    "dob": "1993-04-09",
+    "nationality": "AU",
+    "role": "ubo"
+   },
+   {
+    "name": "Mei Wong",
+    "dob": "1958-06-10",
+    "nationality": "PL",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00010",
+  "legal_name": "Stonebridge Creek Software LLC",
+  "jurisdiction": "US",
+  "onboarded_on": "2026-01-07",
+  "persons": [
+   {
+    "name": "Moritz Lehmann",
+    "dob": "1986-08-18",
+    "nationality": "DE",
+    "role": "director"
+   },
+   {
+    "name": "Tunde Silva",
+    "dob": "1968-10-22",
+    "nationality": "GH",
+    "role": "director"
+   },
+   {
+    "name": "Harper Foster",
+    "dob": "1962-07-10",
+    "nationality": "IE",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00011",
+  "legal_name": "Moorland Gate Furnishings Inc.",
+  "jurisdiction": "US",
+  "onboarded_on": "2025-04-02",
+  "persons": [
+   {
+    "name": "Ruby Thornton",
+    "dob": "1988-05-13",
+    "nationality": "CA",
+    "role": "ubo"
+   },
+   {
+    "name": "Anna Friedrich",
+    "dob": "1955-06-08",
+    "nationality": "AT",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00012",
+  "legal_name": "Meridian Energy GmbH",
+  "jurisdiction": "DE",
+  "onboarded_on": "2025-03-23",
+  "persons": [
+   {
+    "name": "Mei Horváth",
+    "dob": "1959-11-09",
+    "nationality": "BR",
+    "role": "director"
+   },
+   {
+    "name": "Chloé Mensah",
+    "dob": "1958-12-25",
+    "nationality": "FR",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00013",
+  "legal_name": "Riverbend Ridge Media LLC",
+  "jurisdiction": "US",
+  "onboarded_on": "2026-03-11",
+  "persons": [
+   {
+    "name": "Andrew Bennett",
+    "dob": "1973-12-29",
+    "nationality": "US",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00014",
+  "legal_name": "Calder Gate Software Inc.",
+  "jurisdiction": "US",
+  "onboarded_on": "2026-07-24",
+  "persons": [
+   {
+    "name": "Patrick Foster",
+    "dob": "1997-12-18",
+    "nationality": "CA",
+    "role": "director"
+   },
+   {
+    "name": "Yuki Laurent",
+    "dob": "1977-07-11",
+    "nationality": "HU",
+    "role": "ubo"
+   },
+   {
+    "name": "Wei Silva",
+    "dob": "1964-12-02",
+    "nationality": "SE",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00015",
+  "legal_name": "Pinecrest Gate Dental LLC",
+  "jurisdiction": "US",
+  "onboarded_on": "2024-08-10",
+  "persons": [
+   {
+    "name": "Nkechi Sharma",
+    "dob": "1963-04-27",
+    "nationality": "FR",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00016",
+  "legal_name": "Redwood Field Foods LLC",
+  "jurisdiction": "US",
+  "onboarded_on": "2025-09-14",
+  "persons": [
+   {
+    "name": "Daan Mensah",
+    "dob": "1957-03-10",
+    "nationality": "NG",
+    "role": "ubo"
+   },
+   {
+    "name": "Oliver Sullivan",
+    "dob": "1993-10-11",
+    "nationality": "AU",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00017",
+  "legal_name": "Tidewater Brook Travel LLC",
+  "jurisdiction": "US",
+  "onboarded_on": "2024-05-03",
+  "persons": [
+   {
+    "name": "Yuki Mensah",
+    "dob": "1960-12-16",
+    "nationality": "FR",
+    "role": "ubo"
+   },
+   {
+    "name": "Chloe Brooks",
+    "dob": "1973-10-11",
+    "nationality": "GB",
+    "role": "director"
+   },
+   {
+    "name": "Ingrid Laurent",
+    "dob": "1974-09-25",
+    "nationality": "HU",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00018",
+  "legal_name": "Brightwater Point Energy GmbH",
+  "jurisdiction": "DE",
+  "onboarded_on": "2025-12-04",
+  "persons": [
+   {
+    "name": "Arjun Okafor",
+    "dob": "1961-01-14",
+    "nationality": "BR",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00019",
+  "legal_name": "Meadowbrook Hill Builders Inc.",
+  "jurisdiction": "US",
+  "onboarded_on": "2026-08-29",
+  "persons": [
+   {
+    "name": "Emily Radcliffe",
+    "dob": "1966-06-30",
+    "nationality": "CA",
+    "role": "director"
+   },
+   {
+    "name": "Lukas Koch",
+    "dob": "1979-06-01",
+    "nationality": "CH",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00020",
+  "legal_name": "Halcyon Valley Media Ltd",
+  "jurisdiction": "GB",
+  "onboarded_on": "2026-07-12",
+  "persons": [
+   {
+    "name": "Clara Lange",
+    "dob": "1973-08-04",
+    "nationality": "CH",
+    "role": "director"
+   },
+   {
+    "name": "Ruby Coleman",
+    "dob": "1994-02-02",
+    "nationality": "AU",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00021",
+  "legal_name": "Copperleaf Bay Furnishings Ltd",
+  "jurisdiction": "GB",
+  "onboarded_on": "2025-08-24",
+  "persons": [
+   {
+    "name": "Oliver Pemberton",
+    "dob": "1960-08-01",
+    "nationality": "AU",
+    "role": "ubo"
+   },
+   {
+    "name": "Katharina Schäfer",
+    "dob": "1967-06-29",
+    "nationality": "AT",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00022",
+  "legal_name": "Stonebridge Harbor Media Inc.",
+  "jurisdiction": "US",
+  "onboarded_on": "2025-07-13",
+  "persons": [
+   {
+    "name": "Abigail Coleman",
+    "dob": "1977-01-08",
+    "nationality": "GB",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00023",
+  "legal_name": "Stonebridge Commerce Ltd",
+  "jurisdiction": "GB",
+  "onboarded_on": "2024-07-01",
+  "persons": [
+   {
+    "name": "Matthew Kingsley",
+    "dob": "1977-10-16",
+    "nationality": "IE",
+    "role": "director"
+   },
+   {
+    "name": "Fatima Nilsson",
+    "dob": "1993-08-01",
+    "nationality": "HU",
+    "role": "director"
+   },
+   {
+    "name": "Aisha Wong",
+    "dob": "1990-05-05",
+    "nationality": "JP",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00024",
+  "legal_name": "Sterling Point Medical Ltd",
+  "jurisdiction": "GB",
+  "onboarded_on": "2024-08-09",
+  "persons": [
+   {
+    "name": "Chloé Okafor",
+    "dob": "1997-10-21",
+    "nationality": "HU",
+    "role": "ubo"
+   },
+   {
+    "name": "Priya Demir",
+    "dob": "1965-06-18",
+    "nationality": "BR",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00025",
+  "legal_name": "Arcadia Media LLC",
+  "jurisdiction": "US",
+  "onboarded_on": "2026-03-05",
+  "persons": [
+   {
+    "name": "Daniel Carter",
+    "dob": "1998-02-27",
+    "nationality": "GB",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00026",
+  "legal_name": "Fernhill Valley Media Inc.",
+  "jurisdiction": "US",
+  "onboarded_on": "2026-01-31",
+  "persons": [
+   {
+    "name": "Rohan Dubois",
+    "dob": "1972-02-14",
+    "nationality": "NL",
+    "role": "ubo"
+   },
+   {
+    "name": "Isabella Bennett",
+    "dob": "1993-07-18",
+    "nationality": "GB",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00027",
+  "legal_name": "Kestrel Coffee LLC",
+  "jurisdiction": "US",
+  "onboarded_on": "2025-03-27",
+  "persons": [
+   {
+    "name": "Chloe Kingsley",
+    "dob": "1969-05-21",
+    "nationality": "IE",
+    "role": "director"
+   },
+   {
+    "name": "Oliver Foster",
+    "dob": "1960-06-22",
+    "nationality": "AU",
+    "role": "ubo"
+   },
+   {
+    "name": "Maximilian Lange",
+    "dob": "1992-12-16",
+    "nationality": "DE",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00028",
+  "legal_name": "Evergreen Commerce LLC",
+  "jurisdiction": "US",
+  "onboarded_on": "2025-08-13",
+  "persons": [
+   {
+    "name": "Sophia Kingsley",
+    "dob": "1956-04-29",
+    "nationality": "CA",
+    "role": "ubo"
+   },
+   {
+    "name": "Emma Brooks",
+    "dob": "1996-12-25",
+    "nationality": "US",
+    "role": "director"
+   },
+   {
+    "name": "Daniel Prescott",
+    "dob": "1987-05-03",
+    "nationality": "GB",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00029",
+  "legal_name": "Summit Harbor Advisory Inc.",
+  "jurisdiction": "US",
+  "onboarded_on": "2026-07-30",
+  "persons": [
+   {
+    "name": "Thomas Stanton",
+    "dob": "1963-03-03",
+    "nationality": "US",
+    "role": "ubo"
+   },
+   {
+    "name": "Emma Coleman",
+    "dob": "1997-05-19",
+    "nationality": "GB",
+    "role": "director"
+   },
+   {
+    "name": "Jack Hughes",
+    "dob": "1955-03-06",
+    "nationality": "US",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00030",
+  "legal_name": "Silverline Valley Design Inc.",
+  "jurisdiction": "US",
+  "onboarded_on": "2026-01-29",
+  "persons": [
+   {
+    "name": "Henry Ashford",
+    "dob": "1979-11-18",
+    "nationality": "US",
+    "role": "ubo"
+   },
+   {
+    "name": "Oliver Radcliffe",
+    "dob": "1991-01-09",
+    "nationality": "IE",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00031",
+  "legal_name": "Alder Furnishings LLC",
+  "jurisdiction": "US",
+  "onboarded_on": "2025-12-26",
+  "persons": [
+   {
+    "name": "Thomas Caldwell",
+    "dob": "1974-09-27",
+    "nationality": "US",
+    "role": "ubo"
+   },
+   {
+    "name": "Fatima Andersson",
+    "dob": "1989-06-30",
+    "nationality": "NG",
+    "role": "director"
+   },
+   {
+    "name": "Lena Lehmann",
+    "dob": "1969-12-13",
+    "nationality": "CH",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00032",
+  "legal_name": "Kestrel Advisory LLC",
+  "jurisdiction": "US",
+  "onboarded_on": "2025-02-26",
+  "persons": [
+   {
+    "name": "Andrew Pemberton",
+    "dob": "1984-08-16",
+    "nationality": "AU",
+    "role": "ubo"
+   },
+   {
+    "name": "Maximilian Schäfer",
+    "dob": "1985-10-20",
+    "nationality": "DE",
+    "role": "director"
+   },
+   {
+    "name": "Lars Horváth",
+    "dob": "1995-12-28",
+    "nationality": "TR",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00033",
+  "legal_name": "Meridian Design LLC",
+  "jurisdiction": "US",
+  "onboarded_on": "2025-05-22",
+  "persons": [
+   {
+    "name": "Chloe Donnelly",
+    "dob": "1987-05-02",
+    "nationality": "US",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00034",
+  "legal_name": "Halcyon Hill Furnishings Inc.",
+  "jurisdiction": "US",
+  "onboarded_on": "2026-04-30",
+  "persons": [
+   {
+    "name": "Abigail Ellison",
+    "dob": "1997-06-02",
+    "nationality": "US",
+    "role": "ubo"
+   },
+   {
+    "name": "Henry Radcliffe",
+    "dob": "1964-05-10",
+    "nationality": "CA",
+    "role": "ubo"
+   },
+   {
+    "name": "Michael Bennett",
+    "dob": "1959-02-17",
+    "nationality": "CA",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00035",
+  "legal_name": "Sterling Energy Ltd",
+  "jurisdiction": "GB",
+  "onboarded_on": "2025-04-23",
+  "persons": [
+   {
+    "name": "Olivia Ellison",
+    "dob": "1995-10-03",
+    "nationality": "GB",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00036",
+  "legal_name": "Alder Energy Inc.",
+  "jurisdiction": "US",
+  "onboarded_on": "2024-12-16",
+  "persons": [
+   {
+    "name": "Wei Sharma",
+    "dob": "1996-07-09",
+    "nationality": "PL",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00037",
+  "legal_name": "Bramble Hill Media Inc.",
+  "jurisdiction": "US",
+  "onboarded_on": "2025-03-03",
+  "persons": [
+   {
+    "name": "Mia Langley",
+    "dob": "1971-06-28",
+    "nationality": "AU",
+    "role": "director"
+   },
+   {
+    "name": "Michael Harper",
+    "dob": "1970-09-08",
+    "nationality": "US",
+    "role": "ubo"
+   },
+   {
+    "name": "Samuel Prescott",
+    "dob": "1981-03-02",
+    "nationality": "IE",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00038",
+  "legal_name": "Ironbridge Hill Medical Inc.",
+  "jurisdiction": "US",
+  "onboarded_on": "2024-05-06",
+  "persons": [
+   {
+    "name": "Samuel Mitchell",
+    "dob": "1980-05-20",
+    "nationality": "AU",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00039",
+  "legal_name": "Northgate Coffee LLC",
+  "jurisdiction": "US",
+  "onboarded_on": "2025-09-28",
+  "persons": [
+   {
+    "name": "Julien Iyer",
+    "dob": "1978-08-02",
+    "nationality": "HU",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00040",
+  "legal_name": "Moorland Harbor Advisory Ltd",
+  "jurisdiction": "GB",
+  "onboarded_on": "2026-03-07",
+  "persons": [
+   {
+    "name": "Matthew Sullivan",
+    "dob": "1992-03-03",
+    "nationality": "GB",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00041",
+  "legal_name": "Lakeshore Bay Commerce Inc.",
+  "jurisdiction": "US",
+  "onboarded_on": "2025-10-02",
+  "persons": [
+   {
+    "name": "Samuel Carter",
+    "dob": "1992-01-25",
+    "nationality": "US",
+    "role": "director"
+   },
+   {
+    "name": "Charlotte Blackwood",
+    "dob": "1960-02-22",
+    "nationality": "US",
+    "role": "director"
+   },
+   {
+    "name": "Lucía Dubois",
+    "dob": "1968-03-04",
+    "nationality": "BR",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00042",
+  "legal_name": "Juniper Bay Advisory LLC",
+  "jurisdiction": "US",
+  "onboarded_on": "2025-06-29",
+  "persons": [
+   {
+    "name": "David Langley",
+    "dob": "1974-12-31",
+    "nationality": "CA",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00043",
+  "legal_name": "Wren Point Travel LLC",
+  "jurisdiction": "US",
+  "onboarded_on": "2025-06-22",
+  "persons": [
+   {
+    "name": "Ingrid de Vries",
+    "dob": "1990-08-12",
+    "nationality": "PT",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00044",
+  "legal_name": "Riverbend Valley Software Inc.",
+  "jurisdiction": "US",
+  "onboarded_on": "2025-09-02",
+  "persons": [
+   {
+    "name": "Abigail Wakefield",
+    "dob": "1978-08-10",
+    "nationality": "GB",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00045",
+  "legal_name": "Cobalt Creek Medical Inc.",
+  "jurisdiction": "US",
+  "onboarded_on": "2025-03-14",
+  "persons": [
+   {
+    "name": "Liam Kingsley",
+    "dob": "1994-07-22",
+    "nationality": "CA",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00046",
+  "legal_name": "Meridian Gate Commerce GmbH",
+  "jurisdiction": "DE",
+  "onboarded_on": "2024-06-22",
+  "persons": [
+   {
+    "name": "Katharina Schwarz",
+    "dob": "1967-01-22",
+    "nationality": "DE",
+    "role": "director"
+   },
+   {
+    "name": "Mateo Bianchi",
+    "dob": "1997-01-20",
+    "nationality": "HU",
+    "role": "ubo"
+   },
+   {
+    "name": "Lars Mensah",
+    "dob": "1966-04-30",
+    "nationality": "GH",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00047",
+  "legal_name": "Bramble Hill Software LLC",
+  "jurisdiction": "US",
+  "onboarded_on": "2025-11-28",
+  "persons": [
+   {
+    "name": "Laura Wagner",
+    "dob": "1956-01-21",
+    "nationality": "AT",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00048",
+  "legal_name": "Vantage Foods Inc.",
+  "jurisdiction": "US",
+  "onboarded_on": "2024-08-16",
+  "persons": [
+   {
+    "name": "Harper Gallagher",
+    "dob": "1979-05-28",
+    "nationality": "GB",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00049",
+  "legal_name": "Briarwood Brook Coffee LLC",
+  "jurisdiction": "US",
+  "onboarded_on": "2024-05-11",
+  "persons": [
+   {
+    "name": "Sanne García",
+    "dob": "1994-04-28",
+    "nationality": "IT",
+    "role": "director"
+   },
+   {
+    "name": "Thomas Ramsey",
+    "dob": "1985-09-29",
+    "nationality": "US",
+    "role": "director"
+   },
+   {
+    "name": "Carlos Laurent",
+    "dob": "1977-06-04",
+    "nationality": "NG",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00050",
+  "legal_name": "Oakridge Media Inc.",
+  "jurisdiction": "US",
+  "onboarded_on": "2025-01-26",
+  "persons": [
+   {
+    "name": "Freya Ashford",
+    "dob": "1960-06-25",
+    "nationality": "IE",
+    "role": "director"
+   },
+   {
+    "name": "Michael Thornton",
+    "dob": "1982-01-19",
+    "nationality": "US",
+    "role": "ubo"
+   },
+   {
+    "name": "Abigail Hughes",
+    "dob": "1963-09-18",
+    "nationality": "IE",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00051",
+  "legal_name": "Pinecrest Furnishings GmbH",
+  "jurisdiction": "DE",
+  "onboarded_on": "2024-05-05",
+  "persons": [
+   {
+    "name": "Sophie Köhler",
+    "dob": "1994-09-23",
+    "nationality": "DE",
+    "role": "director"
+   },
+   {
+    "name": "Zoe Sullivan",
+    "dob": "1983-11-10",
+    "nationality": "AU",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00052",
+  "legal_name": "Wren Foods Inc.",
+  "jurisdiction": "US",
+  "onboarded_on": "2025-11-24",
+  "persons": [
+   {
+    "name": "Grace Ellison",
+    "dob": "1979-02-09",
+    "nationality": "CA",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00053",
+  "legal_name": "Orchard Coffee LLC",
+  "jurisdiction": "US",
+  "onboarded_on": "2025-09-23",
+  "persons": [
+   {
+    "name": "Mia Bennett",
+    "dob": "1959-01-29",
+    "nationality": "IE",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00054",
+  "legal_name": "Fernhill Field Design LLC",
+  "jurisdiction": "US",
+  "onboarded_on": "2025-06-01",
+  "persons": [
+   {
+    "name": "James Ashford",
+    "dob": "1984-05-06",
+    "nationality": "GB",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00055",
+  "legal_name": "Crescent Design LLC",
+  "jurisdiction": "US",
+  "onboarded_on": "2025-12-22",
+  "persons": [
+   {
+    "name": "Oliver Coleman",
+    "dob": "1976-08-19",
+    "nationality": "US",
+    "role": "director"
+   },
+   {
+    "name": "Freya Coleman",
+    "dob": "1992-03-30",
+    "nationality": "IE",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00056",
+  "legal_name": "Ashgrove Software Inc.",
+  "jurisdiction": "US",
+  "onboarded_on": "2024-08-11",
+  "persons": [
+   {
+    "name": "Priya Costa",
+    "dob": "1963-07-28",
+    "nationality": "NG",
+    "role": "ubo"
+   },
+   {
+    "name": "Zoe Pemberton",
+    "dob": "1963-03-17",
+    "nationality": "GB",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00057",
+  "legal_name": "Evergreen Creek Furnishings Inc.",
+  "jurisdiction": "US",
+  "onboarded_on": "2026-07-19",
+  "persons": [
+   {
+    "name": "Haruto Adeyemi",
+    "dob": "1975-10-15",
+    "nationality": "NG",
+    "role": "director"
+   },
+   {
+    "name": "Hannah Stanton",
+    "dob": "1987-12-22",
+    "nationality": "US",
+    "role": "ubo"
+   },
+   {
+    "name": "Ruby Sullivan",
+    "dob": "1968-08-28",
+    "nationality": "US",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00058",
+  "legal_name": "Clearpath Valley Medical Inc.",
+  "jurisdiction": "US",
+  "onboarded_on": "2024-09-24",
+  "persons": [
+   {
+    "name": "Elif Sharma",
+    "dob": "1983-09-22",
+    "nationality": "ES",
+    "role": "director"
+   },
+   {
+    "name": "Fatima Novak",
+    "dob": "1983-03-10",
+    "nationality": "JP",
+    "role": "ubo"
+   },
+   {
+    "name": "Florian Werner",
+    "dob": "1986-04-20",
+    "nationality": "DE",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00059",
+  "legal_name": "Northgate Brook Medical Ltd",
+  "jurisdiction": "GB",
+  "onboarded_on": "2026-04-18",
+  "persons": [
+   {
+    "name": "Benjamin Kingsley",
+    "dob": "1959-12-28",
+    "nationality": "IE",
+    "role": "ubo"
+   },
+   {
+    "name": "Sofía Demir",
+    "dob": "1980-02-18",
+    "nationality": "HU",
+    "role": "director"
+   },
+   {
+    "name": "Daniel Prescott",
+    "dob": "1957-05-23",
+    "nationality": "US",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00060",
+  "legal_name": "Bramble Harbor Media Ltd",
+  "jurisdiction": "GB",
+  "onboarded_on": "2026-02-05",
+  "persons": [
+   {
+    "name": "James Mitchell",
+    "dob": "1961-05-07",
+    "nationality": "GB",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00061",
+  "legal_name": "Calder Dental LLC",
+  "jurisdiction": "US",
+  "onboarded_on": "2024-04-19",
+  "persons": [
+   {
+    "name": "Andrew Pemberton",
+    "dob": "1982-12-14",
+    "nationality": "CA",
+    "role": "director"
+   },
+   {
+    "name": "Lucy Donnelly",
+    "dob": "1958-03-05",
+    "nationality": "US",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00062",
+  "legal_name": "Meadowbrook Field Foods Inc.",
+  "jurisdiction": "US",
+  "onboarded_on": "2024-11-20",
+  "persons": [
+   {
+    "name": "Michael Foster",
+    "dob": "1970-08-14",
+    "nationality": "AU",
+    "role": "ubo"
+   },
+   {
+    "name": "Sofía Sharma",
+    "dob": "1980-09-27",
+    "nationality": "JP",
+    "role": "ubo"
+   },
+   {
+    "name": "Camille Kapoor",
+    "dob": "1990-04-06",
+    "nationality": "ES",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00063",
+  "legal_name": "Riverbend Harbor Energy Ltd",
+  "jurisdiction": "GB",
+  "onboarded_on": "2026-02-11",
+  "persons": [
+   {
+    "name": "Michael Reynolds",
+    "dob": "1994-08-10",
+    "nationality": "IE",
+    "role": "ubo"
+   },
+   {
+    "name": "Moritz Schwarz",
+    "dob": "1997-09-11",
+    "nationality": "CH",
+    "role": "director"
+   },
+   {
+    "name": "Ella Carter",
+    "dob": "1967-06-19",
+    "nationality": "AU",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00064",
+  "legal_name": "Halcyon Rock Software Inc.",
+  "jurisdiction": "US",
+  "onboarded_on": "2025-04-11",
+  "persons": [
+   {
+    "name": "Rohan Lin",
+    "dob": "1983-07-07",
+    "nationality": "HU",
+    "role": "ubo"
+   },
+   {
+    "name": "Joshua Holloway",
+    "dob": "1963-12-22",
+    "nationality": "AU",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00065",
+  "legal_name": "Foxglove Creek Foods LLC",
+  "jurisdiction": "US",
+  "onboarded_on": "2025-09-20",
+  "persons": [
+   {
+    "name": "Chloé García",
+    "dob": "1962-03-07",
+    "nationality": "NL",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00066",
+  "legal_name": "Granite Valley Medical Ltd",
+  "jurisdiction": "GB",
+  "onboarded_on": "2025-08-24",
+  "persons": [
+   {
+    "name": "Lucía Rossi",
+    "dob": "1955-04-26",
+    "nationality": "ES",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00067",
+  "legal_name": "Pinecrest Rock Medical Inc.",
+  "jurisdiction": "US",
+  "onboarded_on": "2026-06-30",
+  "persons": [
+   {
+    "name": "George Radcliffe",
+    "dob": "1982-03-30",
+    "nationality": "CA",
+    "role": "ubo"
+   },
+   {
+    "name": "Niklas Lehmann",
+    "dob": "1968-07-22",
+    "nationality": "CH",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00068",
+  "legal_name": "Tidewater Foods LLC",
+  "jurisdiction": "US",
+  "onboarded_on": "2024-06-24",
+  "persons": [
+   {
+    "name": "George Coleman",
+    "dob": "1975-02-01",
+    "nationality": "CA",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00069",
+  "legal_name": "Redwood Travel GmbH",
+  "jurisdiction": "DE",
+  "onboarded_on": "2026-05-20",
+  "persons": [
+   {
+    "name": "Michail Twerdochlebow",
+    "dob": "1963-02-13",
+    "nationality": "CN",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00070",
+  "legal_name": "Calder Commerce Ltd",
+  "jurisdiction": "GB",
+  "onboarded_on": "2025-06-13",
+  "persons": [
+   {
+    "name": "Sophie Wagner",
+    "dob": "1966-06-17",
+    "nationality": "CH",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00071",
+  "legal_name": "Calder Builders Inc.",
+  "jurisdiction": "US",
+  "onboarded_on": "2024-08-14",
+  "persons": [
+   {
+    "name": "Leon Lange",
+    "dob": "1962-05-23",
+    "nationality": "CH",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00072",
+  "legal_name": "Harbourline Park Furnishings LLC",
+  "jurisdiction": "US",
+  "onboarded_on": "2025-12-09",
+  "persons": [
+   {
+    "name": "Carlos Kapoor",
+    "dob": "1989-04-17",
+    "nationality": "FR",
+    "role": "director"
+   },
+   {
+    "name": "Mateo Ferreira",
+    "dob": "1998-07-27",
+    "nationality": "BR",
+    "role": "ubo"
+   },
+   {
+    "name": "Kwame Kowalski",
+    "dob": "1980-12-12",
+    "nationality": "IN",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00073",
+  "legal_name": "Clearpath Brook Dental LLC",
+  "jurisdiction": "US",
+  "onboarded_on": "2024-11-30",
+  "persons": [
+   {
+    "name": "Joshua Blackwood",
+    "dob": "1970-04-23",
+    "nationality": "CA",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00074",
+  "legal_name": "Kestrel Ridge Furnishings LLC",
+  "jurisdiction": "US",
+  "onboarded_on": "2025-02-26",
+  "persons": [
+   {
+    "name": "James Kingsley",
+    "dob": "1959-07-23",
+    "nationality": "IE",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00075",
+  "legal_name": "Harbourline Medical GmbH",
+  "jurisdiction": "DE",
+  "onboarded_on": "2024-09-10",
+  "persons": [
+   {
+    "name": "Felix Hartmann",
+    "dob": "1963-09-24",
+    "nationality": "AT",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00076",
+  "legal_name": "Ashgrove Rock Advisory LLC",
+  "jurisdiction": "US",
+  "onboarded_on": "2025-12-08",
+  "persons": [
+   {
+    "name": "Fatima Kowalski",
+    "dob": "1998-06-14",
+    "nationality": "SE",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00077",
+  "legal_name": "Sterling Valley Design LLC",
+  "jurisdiction": "US",
+  "onboarded_on": "2025-04-18",
+  "persons": [
+   {
+    "name": "Samuel Bennett",
+    "dob": "1986-07-16",
+    "nationality": "IE",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00078",
+  "legal_name": "Wren Bay Coffee Ltd",
+  "jurisdiction": "GB",
+  "onboarded_on": "2025-09-10",
+  "persons": [
+   {
+    "name": "Paul Hoffmann",
+    "dob": "1983-08-23",
+    "nationality": "DE",
+    "role": "director"
+   },
+   {
+    "name": "Lucy Gallagher",
+    "dob": "1976-02-13",
+    "nationality": "IE",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00079",
+  "legal_name": "Redwood Creek Foods LLC",
+  "jurisdiction": "US",
+  "onboarded_on": "2024-12-30",
+  "persons": [
+   {
+    "name": "Lucy Reynolds",
+    "dob": "1980-10-25",
+    "nationality": "CA",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00080",
+  "legal_name": "Kestrel Hill Travel Inc.",
+  "jurisdiction": "US",
+  "onboarded_on": "2026-02-15",
+  "persons": [
+   {
+    "name": "Emily Mitchell",
+    "dob": "1992-01-05",
+    "nationality": "GB",
+    "role": "ubo"
+   },
+   {
+    "name": "Patrick Caldwell",
+    "dob": "1956-09-19",
+    "nationality": "GB",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00081",
+  "legal_name": "Lumen Hill Design Ltd",
+  "jurisdiction": "GB",
+  "onboarded_on": "2024-09-21",
+  "persons": [
+   {
+    "name": "Kwame de Vries",
+    "dob": "1964-03-13",
+    "nationality": "SE",
+    "role": "director"
+   },
+   {
+    "name": "Ava Kingsley",
+    "dob": "1984-08-08",
+    "nationality": "CA",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00082",
+  "legal_name": "Westmark Creek Design LLC",
+  "jurisdiction": "US",
+  "onboarded_on": "2026-06-02",
+  "persons": [
+   {
+    "name": "Leon Krause",
+    "dob": "1989-09-27",
+    "nationality": "AT",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00083",
+  "legal_name": "Harbourline Dental Inc.",
+  "jurisdiction": "US",
+  "onboarded_on": "2025-01-14",
+  "persons": [
+   {
+    "name": "Fatima Moreau",
+    "dob": "1959-07-16",
+    "nationality": "IT",
+    "role": "director"
+   },
+   {
+    "name": "Sanne Dubois",
+    "dob": "1982-12-23",
+    "nationality": "SE",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00084",
+  "legal_name": "Lakeshore Advisory LLC",
+  "jurisdiction": "US",
+  "onboarded_on": "2024-08-01",
+  "persons": [
+   {
+    "name": "David Ashford",
+    "dob": "1994-05-01",
+    "nationality": "US",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00085",
+  "legal_name": "Saltmarsh Logistics Inc.",
+  "jurisdiction": "US",
+  "onboarded_on": "2025-08-27",
+  "persons": [
+   {
+    "name": "Abigail Radcliffe",
+    "dob": "1963-11-20",
+    "nationality": "IE",
+    "role": "director"
+   },
+   {
+    "name": "Hannah Coleman",
+    "dob": "1967-03-23",
+    "nationality": "GB",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00086",
+  "legal_name": "Kestrel Brook Furnishings Inc.",
+  "jurisdiction": "US",
+  "onboarded_on": "2024-05-30",
+  "persons": [
+   {
+    "name": "Benjamin Ellison",
+    "dob": "1969-01-05",
+    "nationality": "AU",
+    "role": "director"
+   },
+   {
+    "name": "Matthew Brooks",
+    "dob": "1995-09-09",
+    "nationality": "AU",
+    "role": "director"
+   },
+   {
+    "name": "Liam Hughes",
+    "dob": "1959-11-13",
+    "nationality": "US",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00087",
+  "legal_name": "Lumen Energy Inc.",
+  "jurisdiction": "US",
+  "onboarded_on": "2024-09-08",
+  "persons": [
+   {
+    "name": "Sanne Ferreira",
+    "dob": "1960-05-20",
+    "nationality": "IT",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00088",
+  "legal_name": "Meridian Media Inc.",
+  "jurisdiction": "US",
+  "onboarded_on": "2024-09-08",
+  "persons": [
+   {
+    "name": "Zoe Mitchell",
+    "dob": "1992-06-28",
+    "nationality": "US",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00089",
+  "legal_name": "Crescent Valley Travel Ltd",
+  "jurisdiction": "GB",
+  "onboarded_on": "2024-05-26",
+  "persons": [
+   {
+    "name": "Lucía Rossi",
+    "dob": "1984-02-23",
+    "nationality": "IT",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00090",
+  "legal_name": "Foxglove Brook Travel Ltd",
+  "jurisdiction": "GB",
+  "onboarded_on": "2025-06-11",
+  "persons": [
+   {
+    "name": "Benjamin Ellison",
+    "dob": "1998-09-30",
+    "nationality": "GB",
+    "role": "ubo"
+   },
+   {
+    "name": "Emma Holloway",
+    "dob": "1996-06-06",
+    "nationality": "CA",
+    "role": "director"
+   },
+   {
+    "name": "Lars de Vries",
+    "dob": "1970-08-31",
+    "nationality": "ES",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00091",
+  "legal_name": "Vantage Commerce LLC",
+  "jurisdiction": "US",
+  "onboarded_on": "2026-01-08",
+  "persons": [
+   {
+    "name": "Charlotte Langley",
+    "dob": "1990-09-20",
+    "nationality": "CA",
+    "role": "director"
+   },
+   {
+    "name": "Lena Wagner",
+    "dob": "1973-11-27",
+    "nationality": "DE",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00092",
+  "legal_name": "Pinecrest Brook Advisory Inc.",
+  "jurisdiction": "US",
+  "onboarded_on": "2026-03-10",
+  "persons": [
+   {
+    "name": "Emily Underhill",
+    "dob": "1981-07-18",
+    "nationality": "US",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00093",
+  "legal_name": "Juniper Point Commerce GmbH",
+  "jurisdiction": "DE",
+  "onboarded_on": "2024-12-25",
+  "persons": [
+   {
+    "name": "Marco Novak",
+    "dob": "1966-07-23",
+    "nationality": "GH",
+    "role": "ubo"
+   },
+   {
+    "name": "Moritz Köhler",
+    "dob": "1967-07-03",
+    "nationality": "AT",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00094",
+  "legal_name": "Briarwood Gate Dental GmbH",
+  "jurisdiction": "DE",
+  "onboarded_on": "2025-10-04",
+  "persons": [
+   {
+    "name": "Maximilian Vogel",
+    "dob": "1958-01-17",
+    "nationality": "DE",
+    "role": "ubo"
+   },
+   {
+    "name": "Mateo Andersson",
+    "dob": "1994-08-02",
+    "nationality": "GH",
+    "role": "director"
+   },
+   {
+    "name": "Henry Mitchell",
+    "dob": "1986-07-12",
+    "nationality": "GB",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00095",
+  "legal_name": "Silverline Harbor Furnishings LLC",
+  "jurisdiction": "US",
+  "onboarded_on": "2025-07-28",
+  "persons": [
+   {
+    "name": "Moritz Lange",
+    "dob": "1980-02-13",
+    "nationality": "AT",
+    "role": "director"
+   },
+   {
+    "name": "Lucy Whitaker",
+    "dob": "1974-04-21",
+    "nationality": "US",
+    "role": "ubo"
+   },
+   {
+    "name": "Giulia Okafor",
+    "dob": "1987-06-05",
+    "nationality": "GH",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00096",
+  "legal_name": "Stonebridge Energy GmbH",
+  "jurisdiction": "DE",
+  "onboarded_on": "2024-04-26",
+  "persons": [
+   {
+    "name": "Moritz Hoffmann",
+    "dob": "1972-03-24",
+    "nationality": "CH",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00097",
+  "legal_name": "Brightwater Creek Commerce Inc.",
+  "jurisdiction": "US",
+  "onboarded_on": "2025-05-30",
+  "persons": [
+   {
+    "name": "Clara Schäfer",
+    "dob": "1970-11-18",
+    "nationality": "AT",
+    "role": "ubo"
+   },
+   {
+    "name": "Ana Laurent",
+    "dob": "1995-03-08",
+    "nationality": "CN",
+    "role": "director"
+   },
+   {
+    "name": "Lucía Chen",
+    "dob": "1971-01-05",
+    "nationality": "HU",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00098",
+  "legal_name": "Juniper Harbor Builders LLC",
+  "jurisdiction": "US",
+  "onboarded_on": "2025-01-21",
+  "persons": [
+   {
+    "name": "Emre García",
+    "dob": "1973-08-16",
+    "nationality": "NL",
+    "role": "ubo"
+   },
+   {
+    "name": "Abigail Sullivan",
+    "dob": "1985-12-11",
+    "nationality": "US",
+    "role": "ubo"
+   },
+   {
+    "name": "Hannah Hughes",
+    "dob": "1962-12-10",
+    "nationality": "IE",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00099",
+  "legal_name": "Silverline Ridge Commerce Inc.",
+  "jurisdiction": "US",
+  "onboarded_on": "2026-02-10",
+  "persons": [
+   {
+    "name": "Laura Hartmann",
+    "dob": "1982-02-15",
+    "nationality": "CH",
+    "role": "ubo"
+   },
+   {
+    "name": "Harper Prescott",
+    "dob": "1987-06-05",
+    "nationality": "US",
+    "role": "ubo"
+   },
+   {
+    "name": "Arjun Adeyemi",
+    "dob": "1987-04-02",
+    "nationality": "GH",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00100",
+  "legal_name": "Larkspur Hill Builders Ltd",
+  "jurisdiction": "GB",
+  "onboarded_on": "2025-01-08",
+  "persons": [
+   {
+    "name": "Lars Dubois",
+    "dob": "1960-02-28",
+    "nationality": "NL",
+    "role": "ubo"
+   },
+   {
+    "name": "Giulia Rossi",
+    "dob": "1969-10-11",
+    "nationality": "BR",
+    "role": "director"
+   },
+   {
+    "name": "Ryan Ellison",
+    "dob": "1958-06-25",
+    "nationality": "GB",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00101",
+  "legal_name": "Pinecrest Gate Media Inc.",
+  "jurisdiction": "US",
+  "onboarded_on": "2024-10-16",
+  "persons": [
+   {
+    "name": "Harper Caldwell",
+    "dob": "1970-08-13",
+    "nationality": "GB",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00102",
+  "legal_name": "Foxglove Valley Commerce Inc.",
+  "jurisdiction": "US",
+  "onboarded_on": "2026-04-07",
+  "persons": [
+   {
+    "name": "Haruto Okafor",
+    "dob": "1984-07-17",
+    "nationality": "NL",
+    "role": "director"
+   },
+   {
+    "name": "Andrew Ellison",
+    "dob": "1975-06-12",
+    "nationality": "GB",
+    "role": "ubo"
+   },
+   {
+    "name": "George Caldwell",
+    "dob": "1965-05-16",
+    "nationality": "CA",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00103",
+  "legal_name": "Copperleaf Creek Energy LLC",
+  "jurisdiction": "US",
+  "onboarded_on": "2025-03-05",
+  "persons": [
+   {
+    "name": "Evelyn Fairbanks",
+    "dob": "1960-04-17",
+    "nationality": "GB",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00104",
+  "legal_name": "Bluefield Brook Builders LLC",
+  "jurisdiction": "US",
+  "onboarded_on": "2026-03-31",
+  "persons": [
+   {
+    "name": "George Mitchell",
+    "dob": "1984-12-31",
+    "nationality": "GB",
+    "role": "ubo"
+   },
+   {
+    "name": "Michael Bennett",
+    "dob": "1985-12-30",
+    "nationality": "AU",
+    "role": "director"
+   },
+   {
+    "name": "Ana Tanaka",
+    "dob": "1982-04-10",
+    "nationality": "BR",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00105",
+  "legal_name": "Summit Logistics Inc.",
+  "jurisdiction": "US",
+  "onboarded_on": "2026-01-27",
+  "persons": [
+   {
+    "name": "Benjamin Prescott",
+    "dob": "1975-12-13",
+    "nationality": "GB",
+    "role": "ubo"
+   },
+   {
+    "name": "João Rossi",
+    "dob": "1974-04-27",
+    "nationality": "IN",
+    "role": "ubo"
+   },
+   {
+    "name": "Fatima Ferreira",
+    "dob": "1975-10-24",
+    "nationality": "IT",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00106",
+  "legal_name": "Redwood Coffee Inc.",
+  "jurisdiction": "US",
+  "onboarded_on": "2025-10-04",
+  "persons": [
+   {
+    "name": "Evelyn Caldwell",
+    "dob": "1966-05-30",
+    "nationality": "IE",
+    "role": "ubo"
+   },
+   {
+    "name": "Mia Coleman",
+    "dob": "1984-12-30",
+    "nationality": "IE",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00107",
+  "legal_name": "Orchard Gate Software LLC",
+  "jurisdiction": "US",
+  "onboarded_on": "2025-10-16",
+  "persons": [
+   {
+    "name": "Chloé Sharma",
+    "dob": "1996-06-08",
+    "nationality": "CN",
+    "role": "ubo"
+   },
+   {
+    "name": "Julien de Vries",
+    "dob": "1960-04-22",
+    "nationality": "TR",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00108",
+  "legal_name": "Lakeshore Foods Ltd",
+  "jurisdiction": "GB",
+  "onboarded_on": "2025-11-03",
+  "persons": [
+   {
+    "name": "Henry Donnelly",
+    "dob": "1956-05-20",
+    "nationality": "AU",
+    "role": "ubo"
+   },
+   {
+    "name": "Henry Mitchell",
+    "dob": "1980-06-09",
+    "nationality": "AU",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00109",
+  "legal_name": "Meridian Creek Furnishings Inc.",
+  "jurisdiction": "US",
+  "onboarded_on": "2024-07-13",
+  "persons": [
+   {
+    "name": "Nathan Radcliffe",
+    "dob": "1995-07-13",
+    "nationality": "CA",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00110",
+  "legal_name": "Tidewater Bay Medical Inc.",
+  "jurisdiction": "US",
+  "onboarded_on": "2025-01-07",
+  "persons": [
+   {
+    "name": "Yuki Demir",
+    "dob": "1996-10-06",
+    "nationality": "IN",
+    "role": "director"
+   },
+   {
+    "name": "Mia Ellison",
+    "dob": "1993-12-26",
+    "nationality": "GB",
+    "role": "director"
+   },
+   {
+    "name": "Tunde Jansen",
+    "dob": "1988-12-21",
+    "nationality": "GH",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00111",
+  "legal_name": "Silverline Rock Foods LLC",
+  "jurisdiction": "US",
+  "onboarded_on": "2025-04-22",
+  "persons": [
+   {
+    "name": "Thomas Langley",
+    "dob": "1976-09-30",
+    "nationality": "CA",
+    "role": "ubo"
+   },
+   {
+    "name": "Christopher Sullivan",
+    "dob": "1994-03-22",
+    "nationality": "GB",
+    "role": "director"
+   },
+   {
+    "name": "Harper Langley",
+    "dob": "1989-02-18",
+    "nationality": "IE",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00112",
+  "legal_name": "Highland Gate Media Ltd",
+  "jurisdiction": "GB",
+  "onboarded_on": "2024-10-19",
+  "persons": [
+   {
+    "name": "Nathan Holloway",
+    "dob": "1976-09-18",
+    "nationality": "US",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00113",
+  "legal_name": "Harbourline Park Foods Ltd",
+  "jurisdiction": "GB",
+  "onboarded_on": "2025-08-16",
+  "persons": [
+   {
+    "name": "Leon Zimmermann",
+    "dob": "1983-02-16",
+    "nationality": "DE",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00114",
+  "legal_name": "Lumen Advisory LLC",
+  "jurisdiction": "US",
+  "onboarded_on": "2025-08-26",
+  "persons": [
+   {
+    "name": "Zoe Ellison",
+    "dob": "1978-05-27",
+    "nationality": "IE",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00115",
+  "legal_name": "Granite Hill Medical LLC",
+  "jurisdiction": "US",
+  "onboarded_on": "2026-05-30",
+  "persons": [
+   {
+    "name": "David Bennett",
+    "dob": "1997-11-07",
+    "nationality": "GB",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00116",
+  "legal_name": "Bluefield Commerce Inc.",
+  "jurisdiction": "US",
+  "onboarded_on": "2026-03-28",
+  "persons": [
+   {
+    "name": "Harper Coleman",
+    "dob": "1998-08-19",
+    "nationality": "GB",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00117",
+  "legal_name": "Lumen Park Medical LLC",
+  "jurisdiction": "US",
+  "onboarded_on": "2026-05-15",
+  "persons": [
+   {
+    "name": "George Foster",
+    "dob": "1994-10-29",
+    "nationality": "CA",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00118",
+  "legal_name": "Ironbridge Coffee Ltd",
+  "jurisdiction": "GB",
+  "onboarded_on": "2026-04-04",
+  "persons": [
+   {
+    "name": "James Sullivan",
+    "dob": "1965-03-20",
+    "nationality": "AU",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00119",
+  "legal_name": "Highland Brook Medical LLC",
+  "jurisdiction": "US",
+  "onboarded_on": "2025-09-11",
+  "persons": [
+   {
+    "name": "Leon Hoffmann",
+    "dob": "1955-12-13",
+    "nationality": "CH",
+    "role": "director"
+   },
+   {
+    "name": "Emma Prescott",
+    "dob": "1972-09-15",
+    "nationality": "CA",
+    "role": "ubo"
+   },
+   {
+    "name": "George Thornton",
+    "dob": "1998-08-06",
+    "nationality": "GB",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00120",
+  "legal_name": "Bluefield Point Design Inc.",
+  "jurisdiction": "US",
+  "onboarded_on": "2025-03-02",
+  "persons": [
+   {
+    "name": "Lars Iyer",
+    "dob": "1984-02-21",
+    "nationality": "GH",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00121",
+  "legal_name": "Westmark Coffee Inc.",
+  "jurisdiction": "US",
+  "onboarded_on": "2026-08-13",
+  "persons": [
+   {
+    "name": "Ana Fernández",
+    "dob": "1982-04-13",
+    "nationality": "HU",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00122",
+  "legal_name": "Beacon Gate Software Ltd",
+  "jurisdiction": "GB",
+  "onboarded_on": "2026-06-07",
+  "persons": [
+   {
+    "name": "Mei Okafor",
+    "dob": "1956-08-30",
+    "nationality": "PL",
+    "role": "ubo"
+   },
+   {
+    "name": "Mei Costa",
+    "dob": "1965-03-20",
+    "nationality": "ES",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00123",
+  "legal_name": "Crescent Builders LLC",
+  "jurisdiction": "US",
+  "onboarded_on": "2025-07-27",
+  "persons": [
+   {
+    "name": "Hannah Bennett",
+    "dob": "1988-09-28",
+    "nationality": "CA",
+    "role": "ubo"
+   },
+   {
+    "name": "Michael Pemberton",
+    "dob": "1985-09-01",
+    "nationality": "CA",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00124",
+  "legal_name": "Crescent Commerce Inc.",
+  "jurisdiction": "US",
+  "onboarded_on": "2024-04-28",
+  "persons": [
+   {
+    "name": "Elif Chen",
+    "dob": "1989-04-26",
+    "nationality": "CN",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00125",
+  "legal_name": "Cobalt Hill Logistics LLC",
+  "jurisdiction": "US",
+  "onboarded_on": "2026-07-11",
+  "persons": [
+   {
+    "name": "Jonathan Fairbanks",
+    "dob": "1974-04-26",
+    "nationality": "US",
+    "role": "ubo"
+   },
+   {
+    "name": "Chloé Sharma",
+    "dob": "1989-04-23",
+    "nationality": "PL",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00126",
+  "legal_name": "Thornbury Park Builders Inc.",
+  "jurisdiction": "US",
+  "onboarded_on": "2024-09-07",
+  "persons": [
+   {
+    "name": "Liam Coleman",
+    "dob": "1964-09-09",
+    "nationality": "IE",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00127",
+  "legal_name": "Summit Creek Foods GmbH",
+  "jurisdiction": "DE",
+  "onboarded_on": "2026-08-27",
+  "persons": [
+   {
+    "name": "Emre García",
+    "dob": "1997-11-25",
+    "nationality": "HU",
+    "role": "director"
+   },
+   {
+    "name": "Mei Iyer",
+    "dob": "1959-09-07",
+    "nationality": "NL",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00128",
+  "legal_name": "Arcadia Brook Furnishings Ltd",
+  "jurisdiction": "GB",
+  "onboarded_on": "2025-02-26",
+  "persons": [
+   {
+    "name": "Maximilian Braun",
+    "dob": "1961-08-02",
+    "nationality": "CH",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00129",
+  "legal_name": "Fernhill Rock Travel Inc.",
+  "jurisdiction": "US",
+  "onboarded_on": "2025-05-22",
+  "persons": [
+   {
+    "name": "Clara Brandt",
+    "dob": "1981-08-17",
+    "nationality": "AT",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00130",
+  "legal_name": "Stonebridge Brook Design LLC",
+  "jurisdiction": "US",
+  "onboarded_on": "2024-08-16",
+  "persons": [
+   {
+    "name": "Johanna Hoffmann",
+    "dob": "1976-09-15",
+    "nationality": "AT",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00131",
+  "legal_name": "Ironbridge Rock Foods LLC",
+  "jurisdiction": "US",
+  "onboarded_on": "2026-05-11",
+  "persons": [
+   {
+    "name": "Olivia Wakefield",
+    "dob": "1979-09-30",
+    "nationality": "AU",
+    "role": "director"
+   },
+   {
+    "name": "Moritz Neumann",
+    "dob": "1991-08-05",
+    "nationality": "DE",
+    "role": "ubo"
+   },
+   {
+    "name": "Sanne Andersson",
+    "dob": "1987-01-23",
+    "nationality": "HU",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00132",
+  "legal_name": "Granite Furnishings LLC",
+  "jurisdiction": "US",
+  "onboarded_on": "2026-02-21",
+  "persons": [
+   {
+    "name": "Mia Pemberton",
+    "dob": "1986-03-29",
+    "nationality": "GB",
+    "role": "director"
+   },
+   {
+    "name": "Ingrid Sharma",
+    "dob": "1965-09-16",
+    "nationality": "JP",
+    "role": "ubo"
+   },
+   {
+    "name": "Sanne Kowalski",
+    "dob": "1978-04-17",
+    "nationality": "HU",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00133",
+  "legal_name": "Pinecrest Medical Inc.",
+  "jurisdiction": "US",
+  "onboarded_on": "2026-05-16",
+  "persons": [
+   {
+    "name": "Mia Langley",
+    "dob": "1956-02-05",
+    "nationality": "IE",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00134",
+  "legal_name": "Tidewater Field Logistics LLC",
+  "jurisdiction": "US",
+  "onboarded_on": "2025-02-13",
+  "persons": [
+   {
+    "name": "Ingrid Iyer",
+    "dob": "1963-06-14",
+    "nationality": "NL",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00135",
+  "legal_name": "Copperleaf Field Medical GmbH",
+  "jurisdiction": "DE",
+  "onboarded_on": "2024-09-16",
+  "persons": [
+   {
+    "name": "Paul Becker",
+    "dob": "1960-01-01",
+    "nationality": "DE",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00136",
+  "legal_name": "Riverbend Valley Furnishings Inc.",
+  "jurisdiction": "US",
+  "onboarded_on": "2026-02-24",
+  "persons": [
+   {
+    "name": "Ella Bennett",
+    "dob": "1972-03-15",
+    "nationality": "CA",
+    "role": "director"
+   },
+   {
+    "name": "Jonathan Hughes",
+    "dob": "1994-05-10",
+    "nationality": "AU",
+    "role": "ubo"
+   },
+   {
+    "name": "Emily Harper",
+    "dob": "1992-05-26",
+    "nationality": "GB",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00137",
+  "legal_name": "Harbourline Energy LLC",
+  "jurisdiction": "US",
+  "onboarded_on": "2025-12-28",
+  "persons": [
+   {
+    "name": "Harper Prescott",
+    "dob": "1982-09-06",
+    "nationality": "AU",
+    "role": "ubo"
+   },
+   {
+    "name": "Mei Novak",
+    "dob": "1968-08-28",
+    "nationality": "JP",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00138",
+  "legal_name": "Evergreen Travel Inc.",
+  "jurisdiction": "US",
+  "onboarded_on": "2025-03-29",
+  "persons": [
+   {
+    "name": "Isabella Stanton",
+    "dob": "1982-08-06",
+    "nationality": "GB",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00139",
+  "legal_name": "Redwood Builders LLC",
+  "jurisdiction": "US",
+  "onboarded_on": "2024-07-25",
+  "persons": [
+   {
+    "name": "Ryan Whitaker",
+    "dob": "1998-06-22",
+    "nationality": "CA",
+    "role": "ubo"
+   },
+   {
+    "name": "Emre Kapoor",
+    "dob": "1963-03-16",
+    "nationality": "ES",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00140",
+  "legal_name": "Bluefield Media LLC",
+  "jurisdiction": "US",
+  "onboarded_on": "2026-06-13",
+  "persons": [
+   {
+    "name": "Leon Richter",
+    "dob": "1980-10-22",
+    "nationality": "AT",
+    "role": "ubo"
+   },
+   {
+    "name": "Arjun Wong",
+    "dob": "1986-10-24",
+    "nationality": "TR",
+    "role": "ubo"
+   },
+   {
+    "name": "Hannah Coleman",
+    "dob": "1997-10-23",
+    "nationality": "US",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00141",
+  "legal_name": "Briarwood Logistics LLC",
+  "jurisdiction": "US",
+  "onboarded_on": "2026-07-01",
+  "persons": [
+   {
+    "name": "Abigail Reynolds",
+    "dob": "1973-08-04",
+    "nationality": "CA",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00142",
+  "legal_name": "Granite Brook Design GmbH",
+  "jurisdiction": "DE",
+  "onboarded_on": "2024-05-10",
+  "persons": [
+   {
+    "name": "Anna Becker",
+    "dob": "1970-12-04",
+    "nationality": "DE",
+    "role": "director"
+   },
+   {
+    "name": "Lena Krüger",
+    "dob": "1982-11-24",
+    "nationality": "CH",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00143",
+  "legal_name": "Westmark Bay Dental Ltd",
+  "jurisdiction": "GB",
+  "onboarded_on": "2026-03-13",
+  "persons": [
+   {
+    "name": "Ruby Donnelly",
+    "dob": "1998-10-23",
+    "nationality": "AU",
+    "role": "ubo"
+   },
+   {
+    "name": "Evelyn Carter",
+    "dob": "1961-05-11",
+    "nationality": "AU",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00144",
+  "legal_name": "Sterling Field Coffee LLC",
+  "jurisdiction": "US",
+  "onboarded_on": "2026-04-20",
+  "persons": [
+   {
+    "name": "Julien Moreau",
+    "dob": "1979-07-03",
+    "nationality": "JP",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00145",
+  "legal_name": "Clearpath Bay Dental LLC",
+  "jurisdiction": "US",
+  "onboarded_on": "2024-06-04",
+  "persons": [
+   {
+    "name": "James Foster",
+    "dob": "1990-12-20",
+    "nationality": "IE",
+    "role": "ubo"
+   },
+   {
+    "name": "Thomas Hughes",
+    "dob": "1988-02-04",
+    "nationality": "US",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00146",
+  "legal_name": "Larkspur Builders LLC",
+  "jurisdiction": "US",
+  "onboarded_on": "2025-07-24",
+  "persons": [
+   {
+    "name": "Marco Andersson",
+    "dob": "1987-09-04",
+    "nationality": "JP",
+    "role": "ubo"
+   },
+   {
+    "name": "Ingrid Novak",
+    "dob": "1955-04-19",
+    "nationality": "CN",
+    "role": "director"
+   },
+   {
+    "name": "Aisha de Vries",
+    "dob": "1991-04-27",
+    "nationality": "TR",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00147",
+  "legal_name": "Bluefield Gate Software GmbH",
+  "jurisdiction": "DE",
+  "onboarded_on": "2026-04-14",
+  "persons": [
+   {
+    "name": "Hanna Friedrich",
+    "dob": "1975-10-10",
+    "nationality": "CH",
+    "role": "ubo"
+   },
+   {
+    "name": "Clara Zimmermann",
+    "dob": "1980-07-06",
+    "nationality": "CH",
+    "role": "ubo"
+   },
+   {
+    "name": "Yuki Novak",
+    "dob": "1980-04-03",
+    "nationality": "PL",
+    "role": "director"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00148",
+  "legal_name": "Lumen Gate Travel Inc.",
+  "jurisdiction": "US",
+  "onboarded_on": "2025-04-07",
+  "persons": [
+   {
+    "name": "Sophia Bennett",
+    "dob": "1990-06-23",
+    "nationality": "IE",
+    "role": "director"
+   },
+   {
+    "name": "Daan Costa",
+    "dob": "1963-10-30",
+    "nationality": "IT",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00149",
+  "legal_name": "Meridian Harbor Energy Inc.",
+  "jurisdiction": "US",
+  "onboarded_on": "2025-07-15",
+  "persons": [
+   {
+    "name": "Fatima Wong",
+    "dob": "1994-09-09",
+    "nationality": "PT",
+    "role": "ubo"
+   }
+  ]
+ },
+ {
+  "customer_id": "CUS-00150",
+  "legal_name": "Arcadia Creek Medical Inc.",
+  "jurisdiction": "US",
+  "onboarded_on": "2024-11-02",
+  "persons": [
+   {
+    "name": "Julia Schäfer",
+    "dob": "1956-01-15",
+    "nationality": "AT",
+    "role": "ubo"
+   }
+  ]
+ }
+]

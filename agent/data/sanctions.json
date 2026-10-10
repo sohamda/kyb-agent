@@ -1,0 +1,362 @@
+[
+ {
+  "entry_id": "DSL-0001",
+  "name": "Viktor Malshenko",
+  "aliases": [
+   "V. Malshenko"
+  ],
+  "dob": "1966-07-11",
+  "nationality": "KZ",
+  "program": "DEMO-CORRUPTION-2024",
+  "listed_on": "2025-12-07",
+  "remarks": "Fictional entry generated for a demo."
+ },
+ {
+  "entry_id": "DSL-0002",
+  "name": "Anatol Brezhuk",
+  "aliases": [
+   "A. Brezhuk"
+  ],
+  "dob": "1955-04-01",
+  "nationality": "FR",
+  "program": "DEMO-FIN-2023",
+  "listed_on": "2024-02-26",
+  "remarks": "Fictional entry generated for a demo."
+ },
+ {
+  "entry_id": "DSL-0003",
+  "name": "Farid Zoubaidi",
+  "aliases": [
+   "F. Zoubaidi"
+  ],
+  "dob": "1978-02-21",
+  "nationality": "AE",
+  "program": "DEMO-TRADE-2025",
+  "listed_on": "2024-12-31",
+  "remarks": "Fictional entry generated for a demo."
+ },
+ {
+  "entry_id": "DSL-0004",
+  "name": "Omar Haltrani",
+  "aliases": [
+   "O. Haltrani"
+  ],
+  "dob": "1953-09-06",
+  "nationality": "TR",
+  "program": "DEMO-CORRUPTION-2024",
+  "listed_on": "2023-11-10",
+  "remarks": "Fictional entry generated for a demo."
+ },
+ {
+  "entry_id": "DSL-0005",
+  "name": "Lin Qiaofeng",
+  "aliases": [
+   "L. Qiaofeng"
+  ],
+  "dob": "1955-02-18",
+  "nationality": "RS",
+  "program": "DEMO-FIN-2023",
+  "listed_on": "2023-02-11",
+  "remarks": "Fictional entry generated for a demo."
+ },
+ {
+  "entry_id": "DSL-0006",
+  "name": "Darius Kavoshi",
+  "aliases": [
+   "D. Kavoshi"
+  ],
+  "dob": "1971-01-16",
+  "nationality": "AE",
+  "program": "DEMO-TRADE-2025",
+  "listed_on": "2025-07-05",
+  "remarks": "Fictional entry generated for a demo."
+ },
+ {
+  "entry_id": "DSL-0007",
+  "name": "Rustam Tokhirev",
+  "aliases": [
+   "R. Tokhirev"
+  ],
+  "dob": "1962-01-05",
+  "nationality": "AE",
+  "program": "DEMO-TRADE-2025",
+  "listed_on": "2022-12-02",
+  "remarks": "Fictional entry generated for a demo."
+ },
+ {
+  "entry_id": "DSL-0008",
+  "name": "Elena Shardakova",
+  "aliases": [
+   "E. Shardakova"
+  ],
+  "dob": "1969-10-17",
+  "nationality": "AE",
+  "program": "DEMO-FIN-2023",
+  "listed_on": "2025-12-10",
+  "remarks": "Fictional entry generated for a demo."
+ },
+ {
+  "entry_id": "DSL-0009",
+  "name": "Gustavo Ferrandiz-Ulloa",
+  "aliases": [
+   "G. Ferrandiz-Ulloa"
+  ],
+  "dob": "1976-12-20",
+  "nationality": "KZ",
+  "program": "DEMO-CORRUPTION-2024",
+  "listed_on": "2023-11-08",
+  "remarks": "Fictional entry generated for a demo."
+ },
+ {
+  "entry_id": "DSL-0010",
+  "name": "Marek Ostrowiecki",
+  "aliases": [
+   "M. Ostrowiecki"
+  ],
+  "dob": "1958-06-21",
+  "nationality": "FR",
+  "program": "DEMO-FIN-2023",
+  "listed_on": "2023-01-01",
+  "remarks": "Fictional entry generated for a demo."
+ },
+ {
+  "entry_id": "DSL-0011",
+  "name": "Hassan Bel-Kadri",
+  "aliases": [
+   "H. Bel-Kadri"
+  ],
+  "dob": "1965-11-02",
+  "nationality": "FR",
+  "program": "DEMO-TRADE-2025",
+  "listed_on": "2025-03-10",
+  "remarks": "Fictional entry generated for a demo."
+ },
+ {
+  "entry_id": "DSL-0012",
+  "name": "Pavel Gorunov",
+  "aliases": [
+   "P. Gorunov"
+  ],
+  "dob": "1956-08-15",
+  "nationality": "AM",
+  "program": "DEMO-CORRUPTION-2024",
+  "listed_on": "2025-08-28",
+  "remarks": "Fictional entry generated for a demo."
+ },
+ {
+  "entry_id": "DSL-0013",
+  "name": "Tamar Ekvtimova",
+  "aliases": [
+   "T. Ekvtimova"
+  ],
+  "dob": "1976-07-27",
+  "nationality": "TR",
+  "program": "DEMO-TRADE-2025",
+  "listed_on": "2025-11-13",
+  "remarks": "Fictional entry generated for a demo."
+ },
+ {
+  "entry_id": "DSL-0014",
+  "name": "Idris Mbanefo-Clarke",
+  "aliases": [
+   "I. Mbanefo-Clarke"
+  ],
+  "dob": "1979-10-07",
+  "nationality": "AM",
+  "program": "DEMO-CORRUPTION-2024",
+  "listed_on": "2023-03-23",
+  "remarks": "Fictional entry generated for a demo."
+ },
+ {
+  "entry_id": "DSL-0015",
+  "name": "Nadia Vetrovskaya",
+  "aliases": [
+   "N. Vetrovskaya"
+  ],
+  "dob": "1971-03-07",
+  "nationality": "LB",
+  "program": "DEMO-CORRUPTION-2024",
+  "listed_on": "2022-12-02",
+  "remarks": "Fictional entry generated for a demo."
+ },
+ {
+  "entry_id": "DSL-0016",
+  "name": "Karl-Heinz Domrath",
+  "aliases": [
+   "K. Domrath"
+  ],
+  "dob": "1972-04-29",
+  "nationality": "MA",
+  "program": "DEMO-CORRUPTION-2024",
+  "listed_on": "2024-10-23",
+  "remarks": "Fictional entry generated for a demo."
+ },
+ {
+  "entry_id": "DSL-0017",
+  "name": "Jean-Luc Marbonnet",
+  "aliases": [
+   "J. Marbonnet"
+  ],
+  "dob": "1960-01-24",
+  "nationality": "RS",
+  "program": "DEMO-FIN-2023",
+  "listed_on": "2022-12-25",
+  "remarks": "Fictional entry generated for a demo."
+ },
+ {
+  "entry_id": "DSL-0018",
+  "name": "Sardor Islamkulov",
+  "aliases": [
+   "S. Islamkulov"
+  ],
+  "dob": "1965-06-20",
+  "nationality": "DE",
+  "program": "DEMO-CORRUPTION-2024",
+  "listed_on": "2024-04-11",
+  "remarks": "Fictional entry generated for a demo."
+ },
+ {
+  "entry_id": "DSL-0019",
+  "name": "Leonid Fyrsov",
+  "aliases": [
+   "L. Fyrsov"
+  ],
+  "dob": "1984-09-20",
+  "nationality": "MY",
+  "program": "DEMO-CORRUPTION-2024",
+  "listed_on": "2022-10-15",
+  "remarks": "Fictional entry generated for a demo."
+ },
+ {
+  "entry_id": "DSL-0020",
+  "name": "Amira Saffouri",
+  "aliases": [
+   "A. Saffouri"
+  ],
+  "dob": "1955-04-14",
+  "nationality": "GE",
+  "program": "DEMO-TRADE-2025",
+  "listed_on": "2023-11-10",
+  "remarks": "Fictional entry generated for a demo."
+ },
+ {
+  "entry_id": "DSL-0021",
+  "name": "Aleksandr Dravenko",
+  "aliases": [
+   "A. Dravenko"
+  ],
+  "dob": "1959-05-26",
+  "nationality": "LB",
+  "program": "DEMO-FIN-2023",
+  "listed_on": "2023-06-18",
+  "remarks": "Fictional entry generated for a demo."
+ },
+ {
+  "entry_id": "DSL-0022",
+  "name": "Mohammed Al-Qasimar",
+  "aliases": [
+   "M. Al-Qasimar"
+  ],
+  "dob": "1970-12-01",
+  "nationality": "AE",
+  "program": "DEMO-TRADE-2025",
+  "listed_on": "2025-10-08",
+  "remarks": "Fictional entry generated for a demo."
+ },
+ {
+  "entry_id": "DSL-0023",
+  "name": "Yusuf Benhaddou",
+  "aliases": [
+   "Y. Benhaddou"
+  ],
+  "dob": "1986-04-18",
+  "nationality": "FR",
+  "program": "DEMO-TRADE-2025",
+  "listed_on": "2024-06-11",
+  "remarks": "Fictional entry generated for a demo."
+ },
+ {
+  "entry_id": "DSL-0024",
+  "name": "Dmitriy Pelchurov",
+  "aliases": [
+   "D. Pelchurov"
+  ],
+  "dob": "1967-04-04",
+  "nationality": "MA",
+  "program": "DEMO-TRADE-2025",
+  "listed_on": "2023-06-02",
+  "remarks": "Fictional entry generated for a demo."
+ },
+ {
+  "entry_id": "DSL-0025",
+  "name": "Zhang Weiming",
+  "aliases": [
+   "Z. Weiming"
+  ],
+  "dob": "1978-01-05",
+  "nationality": "MY",
+  "program": "DEMO-FIN-2023",
+  "listed_on": "2025-09-05",
+  "remarks": "Fictional entry generated for a demo."
+ },
+ {
+  "entry_id": "DSL-0026",
+  "name": "Jürgen Halbracht",
+  "aliases": [
+   "J. Halbracht"
+  ],
+  "dob": "1964-02-09",
+  "nationality": "UA",
+  "program": "DEMO-TRADE-2025",
+  "listed_on": "2025-11-02",
+  "remarks": "Fictional entry generated for a demo."
+ },
+ {
+  "entry_id": "DSL-0027",
+  "name": "Nikolai Sorokhtin",
+  "aliases": [
+   "N. Sorokhtin"
+  ],
+  "dob": "1954-09-21",
+  "nationality": "VE",
+  "program": "DEMO-TRADE-2025",
+  "listed_on": "2022-12-18",
+  "remarks": "Fictional entry generated for a demo."
+ },
+ {
+  "entry_id": "DSL-0028",
+  "name": "Oleksiy Zarovnyk",
+  "aliases": [
+   "O. Zarovnyk"
+  ],
+  "dob": "1982-07-23",
+  "nationality": "MY",
+  "program": "DEMO-CORRUPTION-2024",
+  "listed_on": "2024-01-15",
+  "remarks": "Fictional entry generated for a demo."
+ },
+ {
+  "entry_id": "DSL-0029",
+  "name": "Sergei Valdurin",
+  "aliases": [
+   "S. Valdurin"
+  ],
+  "dob": "1981-12-29",
+  "nationality": "MA",
+  "program": "DEMO-FIN-2023",
+  "listed_on": "2023-08-13",
+  "remarks": "Fictional entry generated for a demo."
+ },
+ {
+  "entry_id": "DSL-0030",
+  "name": "Khalid Al-Tirhani",
+  "aliases": [
+   "K. Al-Tirhani"
+  ],
+  "dob": "1967-12-11",
+  "nationality": "UZ",
+  "program": "DEMO-TRADE-2025",
+  "listed_on": "2025-07-19",
+  "remarks": "Fictional entry generated for a demo."
+ }
+]
