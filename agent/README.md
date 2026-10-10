@@ -282,3 +282,39 @@ plan, delegate to the three subagents, and return a `KYBDecision`.
 
 Deploy and operate with `mda deploy` / `mda logs` / `mda delete`; see `../PLAN.md` for the
 staging/prod split, Gateway policies, and the full lifecycle.
+
+---
+
+## Model profiles
+
+Which model each agent uses comes from `models.py`, selected by `KYB_MODEL_PROFILE`
+(default `opus`). All ids route through the LLM Gateway.
+
+| Profile | Main agent | document-checker | ownership-investigator | screening-analyst |
+|---|---|---|---|---|
+| `opus` (default) | Opus 5.5 | Opus 5.5 | Opus 5.5 | Opus 5.5 |
+| `mixed` | Opus 5.5 | **Sonnet 5.5** | **Sonnet 5.5** | Opus 5.5 |
+| `sonnet` | Sonnet 5.5 | Sonnet 5.5 | Sonnet 5.5 | Sonnet 5.5 |
+
+Set it per deployment (as a secret) or per experiment. The offline evals compare the
+three so the choice is made on measured accuracy + cost, not by guessing.
+
+## Offline evals (Phase 3)
+
+LangSmith experiments over the labeled `kyb-golden` dataset (`../evals/`). Run from the
+agent env so all deps are present:
+
+```bash
+cd agent
+uv run python ../evals/upload_datasets.py            # create kyb-golden (60 ex, splits, v1)
+uv run python ../evals/run_experiment.py \           # one experiment per profile
+    --profiles opus,sonnet,mixed --split sample --max-concurrency 4
+# then --split all for the full 60
+```
+
+Evaluators (`../evals/evaluators.py`): `decision_correct`, `risk_rating_correct`,
+`ubo_recall`, **`sanctions_recall`** (hard gate — must be 1.0), `escalated_when_required`,
+plus LLM judges `rationale_grounded` / `rationale_quality`, and a reject/EDD
+precision-recall summary. Compare the profiles in the LangSmith comparison view on both
+accuracy and **cost per run**. The eval target runs the agent in-process by default;
+pass `--target-url <agent-server>` to evaluate a deployment instead.

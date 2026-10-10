@@ -1,12 +1,15 @@
 """The three specialist subagents the main KYB agent delegates to.
 
-Subagents leave ``model`` unset, so they run on the main agent's Gateway model.
+Each subagent's model comes from the active model profile (see ``models.py``):
+a subagent not named in the profile inherits the main agent's model. Build the
+list for a given profile with ``make_subagents``.
 """
 
 from __future__ import annotations
 
 from deepagents import SubAgent
 
+from models import subagent_model
 from tools.documents import check_document
 from tools.registry import compute_effective_ownership, lookup_company_registry
 from tools.screening import screen_name, search_adverse_media
@@ -36,8 +39,6 @@ document_checker: SubAgent = {
         "- `expired_document`: true/false, with which documents.\n"
         "- Any documents that could not be verified."
     ),
-    # Tool-driven, mechanical work -> cheaper model (R7 smoke test).
-    "model": "langsmith:anthropic/claude-sonnet-5-5",
     "tools": [lookup_company_registry, check_document],
 }
 
@@ -64,8 +65,6 @@ ownership_investigator: SubAgent = {
         "If the ownership tool returns an error, say so plainly and report what you "
         "could and could not determine. Report the UBO list and any ownership flags."
     ),
-    # Tool-driven, mechanical work -> cheaper model (R7 smoke test).
-    "model": "langsmith:anthropic/claude-sonnet-5-5",
     "tools": [lookup_company_registry, compute_effective_ownership],
 }
 
@@ -96,3 +95,23 @@ screening_analyst: SubAgent = {
     ),
     "tools": [screen_name, search_adverse_media],
 }
+
+_SUBAGENTS: list[SubAgent] = [document_checker, ownership_investigator, screening_analyst]
+
+
+def make_subagents(profile_name: str | None = None) -> list[SubAgent]:
+    """Build the subagent list for a model profile.
+
+    Each subagent gets its own ``model`` only when the profile names one; otherwise
+    the key is omitted so the subagent inherits the main agent's model.
+    """
+    built: list[SubAgent] = []
+    for base in _SUBAGENTS:
+        sub: SubAgent = dict(base)  # shallow copy; tools list is shared, which is fine
+        model = subagent_model(base["name"], profile_name)
+        if model is not None:
+            sub["model"] = model
+        else:
+            sub.pop("model", None)
+        built.append(sub)
+    return built

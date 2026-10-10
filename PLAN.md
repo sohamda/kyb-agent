@@ -351,9 +351,35 @@ All four tool defects were checked against the generated data, and none of them 
 - [x] Iterate in Studio with `mda dev` until golden v1 cases look right by hand. Four golden cases now return the correct `KYBDecision` end-to-end (all three subagents delegating): **clean** APP-5265BB31 (approve/low), **pep** APP-58A28354 (EDD/high, `[pep]`), **document_mismatch** APP-4D19CE0E (EDD/medium, `[document_mismatch]`), and **sanctioned_direct** APP-D8B6BE1F (reject/high, `[sanctions_match]`, with the escalation pause→approve→resume cycle). Harder production-only variants (transliteration, hidden/circular ownership, locale dates) are intentionally not in golden v1.
 
 **Phase 3: Offline evals**
-- [ ] Upload `kyb-golden` v1 with splits.
-- [ ] Write the evaluators (judges via Gateway) and the target (auto-resumes paused runs, records `escalated`).
-- [ ] Baseline experiment; second-model comparison; CI workflow.
+- [x] Upload `kyb-golden` v1 with splits. 60 examples in LangSmith, split per scenario
+  plus a `sample` split (~2/scenario = 14), tagged `v1`. (`evals/upload_datasets.py`)
+- [x] Evaluators + target. Code: `decision_correct`, `risk_rating_correct`, `ubo_recall`
+  (±1%), `sanctions_recall` (hard gate), `escalated_when_required`; LLM judges via Gateway:
+  `rationale_grounded`, `rationale_quality`; summary: reject/EDD precision+recall.
+  (`evals/evaluators.py`) Target runs the agent **in-process** via `create_deep_agent`,
+  resumes the escalation interrupt, records `escalated` + a trajectory; also supports a
+  `--target-url` deployment mode for later. (`evals/target.py`, `evals/run_experiment.py`)
+- [~] Baseline + model comparison. **Sample sweep (14) done for opus/sonnet/mixed.** Full
+  60 and the CI workflow deferred (user chose to stop at the sample). Model wiring is now
+  profile-driven via `agent/models.py` (`KYB_MODEL_PROFILE`, default `opus`).
+
+  **Findings (2026-10-10, 14-case sample):** all three profiles score 1.0 on
+  `decision_correct`, `risk_rating_correct`, `ubo_recall`, `sanctions_recall` (gate) and
+  `escalated_when_required` — accuracy ties on the easy golden cases. Cost/latency differ:
+
+  | profile | avg cost/app | avg latency | vs opus |
+  |---|---|---|---|
+  | opus   | $0.384 | 42.3s | baseline |
+  | sonnet | $0.184 | 28.7s | −52% cost, −32% latency |
+  | mixed  | $0.317 | 41.1s | −18% cost |
+
+  **The main agent dominates cost, not the subagents** — so the two-tier `mixed` config is
+  a weak lever (−18%); the big win is the main agent's model (`sonnet` −52%). Caveat: the
+  sample is the *easy* golden cases; `sonnet` on the main agent (judgment) is least tested
+  here, and the genuinely hard variants are production-only (absent from golden v1), so this
+  does **not** yet justify switching the main agent off Opus. `rationale_grounded` is low
+  (~0.4–0.5) across all profiles — an eval artifact (the judge sees only subagent summaries,
+  not raw tool outputs), not an agent regression.
 
 **Phase 4: Deploy**
 - [ ] Deploy staging and prod; the cron schedule is reconciled.
