@@ -108,9 +108,12 @@ def make_target(profile_name: str) -> Callable[[dict], dict]:
 
 def make_deployment_target(url: str, assistant: str = "kyb-agent") -> Callable[[dict], dict]:
     """Build a target that runs against a deployed Agent Server (Phase 4 / CI)."""
+    import os
+
     from langgraph_sdk import get_sync_client
 
-    client = get_sync_client(url=url)
+    # The deployment authenticates callers with a LangSmith workspace API key.
+    client = get_sync_client(url=url, api_key=os.environ.get("LANGSMITH_API_KEY"))
 
     def _interrupts(thread_id: str) -> bool:
         st = client.threads.get_state(thread_id)

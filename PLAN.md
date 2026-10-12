@@ -381,9 +381,32 @@ All four tool defects were checked against the generated data, and none of them 
   (~0.4–0.5) across all profiles — an eval artifact (the judge sees only subagent summaries,
   not raw tool outputs), not an agent regression.
 
-**Phase 4: Deploy**
-- [ ] Deploy staging and prod; the cron schedule is reconciled.
-- [ ] Set the Gateway spend and rate-limit policies and the fallback chain.
+**Phase 4: Deploy** — ✅ **DONE (2026-10-12).**
+- [x] Deploy staging and prod; the cron schedule is reconciled.
+  - [x] **Staging deployed & verified (2026-10-12).** `mda deploy --name kyb-agent-staging
+    --deployment-type dev --workspace-id 54ee2d7d-…` → DEPLOYED. Agent Server
+    `https://kyb-agent-staging-bcb8bd9b991751d8b253d58ecee502d8.us.langgraph.app`. Verified
+    end-to-end against the live server: clean → approve/low; sanctioned_direct → reject/high
+    `[sanctions_match]` with the escalation **interrupt + API resume**. **The deployed
+    runtime authenticates to the Gateway via the forwarded `LANGSMITH_GATEWAY_API_KEY`
+    secret** (no auto-injection needed) — the open R3-adjacent question is resolved.
+    Cron reconciled on deploy (this PAT can't list crons — verify in the Deployments UI).
+    Workspace id (tenant) = `54ee2d7d-ab2d-4af9-9c6e-ebfb2ab8adc8`; not in `.env`, passed via flag.
+  - [x] **Prod deployed & verified (2026-10-12).** `mda deploy --name kyb-agent-prod
+    --deployment-type prod --workspace-id 54ee2d7d-…` → DEPLOYED. Agent Server
+    `https://kyb-agent-prod-564866f92d5f55b4ada7bf40202c1f96.us.langgraph.app`. Same live
+    smoke check as staging passed: clean → approve/low; sanctioned_direct → reject/high
+    `[sanctions_match]` with escalation **interrupt + API resume**. (The `mda deploy` CLI is
+    gated as a "Production Deploy" by the permission classifier — the user runs/approves it.)
+- [x] **Gateway policies set (2026-10-12, before prod traffic).** *(LangSmith Gateway UI /
+  Govern — not a CLI step.)*
+  - **`kyb-agent-spend-cap`** — $60/day spend limit on `kyb-gateway-key` (the cost backstop;
+    returns `402` when hit). Set before prod per the user's "spend cap first" decision.
+  - **`kyb-agent-rate-limiting`** — 10 req/min on `kyb-gateway-key` (burst ceiling; `429` on
+    exceed). Note: one application = ~5–8 Gateway calls, so keep offline eval reruns at
+    `--max-concurrency 1–2` to avoid self-throttling.
+  - [ ] **Fallback chain** (primary opus-5-5 → sonnet-5-5 on 429/5xx) — optional, not yet set;
+    good Govern-demo material (§7.6) but not required for traffic.
 
 **Phase 5: Monitor**
 - [ ] Online evaluators, dashboard, alerts, annotation queue.
