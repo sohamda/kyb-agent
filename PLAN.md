@@ -408,9 +408,56 @@ All four tool defects were checked against the generated data, and none of them 
   - [ ] **Fallback chain** (primary opus-5-5 → sonnet-5-5 on 429/5xx) — optional, not yet set;
     good Govern-demo material (§7.6) but not required for traffic.
 
-**Phase 5: Monitor**
-- [ ] Online evaluators, dashboard, alerts, annotation queue.
-- [ ] Run `send_traffic.py` + `reviewer_bot.py` for 24–48 hours, starting at one application every 5 minutes (~290/day). The Gateway spend cap is the backstop.
+**Phase 5: Monitor** — 🔧 **in progress (2026-10-12).**
+- [x] **Traffic simulator built & verified on prod (2026-10-12).**
+  - `simulator/send_traffic.py` — reads `traffic_pool.jsonl`, submits each **application only**
+    (never the hidden `label`) to the deployment with `runs.create`, tagging metadata
+    (`application_id`, `jurisdiction`, `industry`, `portal_locale`, `revision_id`,
+    `simulated=true`). Throttle via `--rate-seconds` (default 300 = ~290/day); `--count`,
+    `--offset`, `--shuffle`, `--dry-run`.
+  - `simulator/reviewer_bot.py` — polls `threads.search(status="interrupted")`, matches each
+    paused thread to its ground-truth label by `application_id`, resumes (`approve` a true
+    sanctions match / `reject` a false positive) with a ~5% deliberate error rate, and logs
+    SDK feedback **`reviewer_agreed`** (1 = approved the escalation) on the **decision run**.
+  - **Two-run gotcha (important for online evals & dashboards):** an escalated app yields
+    **two root runs** — the first pauses at the interrupt (`structured_response` is None, has
+    the send-time metadata) and the **resume run carries the decision** but, by default, **no
+    metadata**. Fix: `reviewer_bot` re-attaches metadata (`simulated=true`, `jurisdiction`,
+    `revision_id`, `resumed=true`) on the resume `runs.wait`, so the decision-bearing run is
+    scopeable; `perform_eval` returns `{}` for the pre-decision run; feedback is attached to
+    the latest (decision) run. Verified live on prod (2026-10-12).
+  - `simulator/_env.py` — shared `.env` loader + prod URL + `revision_id()` (git SHA, R3).
+  - **End-to-end smoke passed:** one sanctioned app → agent escalated → paused → bot resumed
+    (approve) → final **reject/high `[sanctions_match]`**, `reviewer_agreed=1.0` on the trace
+    (session `01a12fdb-…`). Run from `agent/`: `uv run python ../simulator/send_traffic.py …`.
+- [ ] **Online evaluators** on the prod project — reference impls in `evals/online_evaluators.py`;
+  configure as online rules in the UI (code: `all_parties_screened`, `is_reject`, `is_edd`;
+  LLM-judge: `rationale_grounded` 20% sample, `followed_embedded_instructions` on all runs =
+  the D5 catch). *(UI step.)*
+  - **Judge model caveat (R8 again, 2026-10-12):** the managed LLM-judge adds the score
+    schema as structured output → forced `tool_choice`, which **Opus/Sonnet 5.5 reject**
+    (400). The managed judge runs the model *natively* (workspace secret), not via the
+    Gateway, so the judge model must support forced tool calls — use a **pre-5.5 Claude**
+    (Sonnet 4 / 3.7 / 3.5, reusing `ANTHROPIC_API_KEY`) or an OpenAI model (new
+    `OPENAI_API_KEY` secret). Judge model ≠ agent model is fine.
+  - **Online-evaluator config gotchas (2026-10-12, found via the burst):**
+    1. **Code evaluator signature:** the *online* contract is `def perform_eval(run):`
+       (ONE arg). A two-arg `(run, example)` trips the dataset-style result parser, and
+       LangSmith then logs only the first declared key with a **null score** (symptom:
+       `is_reject` score=None, `is_edd`/`all_parties_screened` missing). `online_evaluators.py`
+       is now one-arg. Return a `{metric: score}` dict; multiple keys = multiple feedback.
+    2. **LLM-judge feedback key:** the feedback key comes from the judge's *schema/template*,
+       not its name. Creating a judge from the **Conciseness template** and only renaming the
+       evaluator leaves the key as `conciseness` (both judges collided on it). Set the
+       feedback key explicitly (or build from a blank custom evaluator).
+    3. Online evaluators **don't backfill** unless toggled at creation — new keys appear only
+       on new runs.
+  - **Burst verification (2026-10-12):** sent 8 mixed apps to prod to populate the metrics;
+    confirmed traffic + reviewer-bot metadata propagation end-to-end. A couple of runs hit
+    `status=error` (expected — planted tool defects D2/D3 crashing on ownership edge cases).
+- [ ] **Custom dashboard, alerts (Slack), annotation queue "KYB QA"** — *(UI steps; §5 Monitor.)*
+- [ ] **Run the 24–48h traffic + reviewer bot** at 1 app/5 min (~290/day); $60/day Gateway cap
+  is the backstop. Kick off once the online evaluators + dashboard are in place.
 
 **Phase 6: Improve**
 - [ ] Enable Engine, add notifications, wait for issues; open PRs; add offline examples → `kyb-golden` v2.
