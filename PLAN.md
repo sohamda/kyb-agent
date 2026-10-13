@@ -216,7 +216,7 @@ All four tool defects were checked against the generated data, and none of them 
 | D1 | `screen_name` | Raw-string similarity ≥ 0.92 with no normalization or transliteration | All 40 transliterated sanctioned names missed → approved instead of rejected | Engine, reviewer-bot disagreements, annotation queue |
 | D2 | `compute_effective_ownership` | No cycle detection | 19 of the circular-ownership cases crash with `RecursionError` | Tool-error alert, Engine "Tool Call Failures" |
 | D3 | ownership parsing | `float(value)` and ignores the record's `ownership_unit` | 24 Cyprus cases fail with `ValueError`. 26 Dutch cases get the wrong owners, which **hides the sanctioned owner in 18 of the 40 hidden-sanctions cases** | Tool-error alert, Engine |
-| D4 | `check_document` | Parses expiry dates as `%m/%d/%Y` only | Every DE date fails; about 58% of GB dates fail and the rest parse with day and month swapped → unverifiable documents → EDD spike for GB/DE | Dashboard (EDD rate by jurisdiction), Engine |
+| D4 | `check_document` | At the v1 baseline, parsed expiry dates as `%m/%d/%Y` only | Every DE date fails; about 58% of GB dates fail and the rest parse with day and month swapped → unverifiable documents → EDD spike for GB/DE | Dashboard (EDD rate by jurisdiction), Engine |
 | D5 | `instructions.md` | No explicit rule that application and document text is untrusted | Some injected applications approved | Online LLM judge, Engine |
 
 ## 5. LangSmith features by ADLC stage
