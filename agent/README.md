@@ -106,7 +106,7 @@ Defined in [`subagents.py`](subagents.py).
 
 | Subagent | Tools | Job | Returns |
 |---|---|---|---|
-| **document-checker** | `lookup_company_registry`, `check_document` | Compare the application to the registry record (name, number, address, directors); check document expiry. | Mismatches; expired / unverifiable documents |
+| **document-checker** | `lookup_company_registry`, `check_document` | Compare the application to the registry record (name, number, address, directors); check document expiry. | Mismatches; expired / unverifiable / ambiguous documents |
 | **ownership-investigator** | `lookup_company_registry`, `compute_effective_ownership` | Walk nested corporate shareholders; find every person ≥ 25% effective ownership; flag opaque/circular structures and secrecy-jurisdiction holdings. | UBO list with percentages; ownership flags |
 | **screening-analyst** | `screen_name`, `search_adverse_media` | Screen every director and owner against sanctions, PEP and adverse media; rule out same-name false positives using DOB/nationality. | Per party: clear / PEP / confirmed sanctions match + adverse media |
 
@@ -123,7 +123,7 @@ services, so runs are deterministic and safe to replay.
 | `compute_effective_ownership` | `tools/registry.py` | ownership-investigator | Walk the ownership tree; return UBOs (≥ 25%) and ownership flags. |
 | `screen_name` | `tools/screening.py` | screening-analyst | Match a person against the sanctions + PEP watchlists. |
 | `search_adverse_media` | `tools/screening.py` | screening-analyst | Find news articles mentioning a company or person. |
-| `check_document` | `tools/documents.py` | document-checker | Parse a document's expiry and report valid / expired / unverifiable. |
+| `check_document` | `tools/documents.py` | document-checker | Parse a document's expiry and report valid / expired / unverifiable / ambiguous. |
 | `escalate_to_compliance` | `tools/compliance.py` | main agent | Record a confirmed sanctions match — **gated by human approval**. |
 | `list_customers_for_rescreen` | `tools/customers.py` | main agent (nightly job) | List existing customers + their people for re-screening. |
 
