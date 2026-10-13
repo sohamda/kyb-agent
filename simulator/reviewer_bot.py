@@ -183,6 +183,9 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--error-rate", type=float, default=0.05)
     ap.add_argument("--seed", type=int, default=7)
     ap.add_argument("--once", action="store_true", help="One pass then exit (for testing).")
+    ap.add_argument("--max-idle-polls", type=int, default=None,
+                    help="Exit after this many consecutive polls with nothing to resume "
+                         "(so the bot stops itself once a bounded traffic run drains).")
     args = ap.parse_args(argv)
 
     labels, metas = _pool_by_app_id()
@@ -195,11 +198,16 @@ def main(argv: list[str] | None = None) -> int:
 
     print(f"reviewer_bot: watching {args.url} (assistant={args.assistant}, "
           f"error_rate={args.error_rate}, poll={args.poll_seconds}s)")
+    idle = 0
     while True:
         n = poll_once(client, ls, labels, metas, revision, args.assistant,
                       args.error_rate, rng, handled, sid_cache)
         if args.once:
             print(f"reviewer_bot: single pass handled {n} thread(s).")
+            return 0
+        idle = idle + 1 if n == 0 else 0
+        if args.max_idle_polls is not None and idle >= args.max_idle_polls:
+            print(f"reviewer_bot: {idle} idle polls — traffic drained, exiting.")
             return 0
         time.sleep(args.poll_seconds)
 

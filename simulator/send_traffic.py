@@ -58,6 +58,12 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--rate-seconds", type=float, default=300.0, help="Seconds between submissions.")
     ap.add_argument("--jitter", type=float, default=0.0, help="± random seconds added to each wait.")
     ap.add_argument("--count", type=int, default=None, help="How many to send (default: all).")
+    ap.add_argument("--budget-usd", type=float, default=None,
+                    help="Stop once the estimated spend reaches this many USD (cost backstop; "
+                         "keep it under the Gateway daily spend cap).")
+    ap.add_argument("--cost-per-app", type=float, default=0.384,
+                    help="Estimated USD per application for the budget cap "
+                         "(Phase 3 finding: opus 0.384, mixed 0.317, sonnet 0.184).")
     ap.add_argument("--offset", type=int, default=0, help="Skip the first N pool rows.")
     ap.add_argument("--shuffle", action="store_true", help="Shuffle the pool (seeded).")
     ap.add_argument("--seed", type=int, default=7)
@@ -65,9 +71,18 @@ def main(argv: list[str] | None = None) -> int:
     args = ap.parse_args(argv)
 
     rows = _rows(args.count, args.offset, args.shuffle, args.seed)
+    # Budget cap: never submit more than the estimated spend allows (stays under the
+    # Gateway daily spend cap so the run never trips a 402 mid-stream).
+    if args.budget_usd is not None and args.cost_per_app > 0:
+        max_by_budget = int(args.budget_usd // args.cost_per_app)
+        if len(rows) > max_by_budget:
+            print(f"send_traffic: budget ${args.budget_usd:.2f} @ ${args.cost_per_app}/app "
+                  f"→ capping {len(rows)} to {max_by_budget} applications.")
+            rows = rows[:max_by_budget]
     rid = _env.revision_id()
+    est_total = len(rows) * args.cost_per_app
     print(
-        f"send_traffic: {len(rows)} applications → {args.url} "
+        f"send_traffic: {len(rows)} applications (~${est_total:.2f} est) → {args.url} "
         f"(assistant={args.assistant}, rate={args.rate_seconds}s, revision={rid})"
     )
     if args.dry_run:
@@ -99,7 +114,7 @@ def main(argv: list[str] | None = None) -> int:
         )
         sent += 1
         print(f"  [{i}] sent {app['application_id']} ({meta.get('jurisdiction')}) "
-              f"thread={tid} run={run['run_id']}")
+              f"thread={tid} run={run['run_id']}  [~${sent * args.cost_per_app:.2f} est]")
         if i < len(rows) - 1:
             wait = args.rate_seconds
             if args.jitter:
