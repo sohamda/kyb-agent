@@ -43,11 +43,12 @@ class KYBDecision(BaseModel):
     decision: Literal["approve", "enhanced_due_diligence", "reject"]
     risk_rating: Literal["low", "medium", "high"]
     ubos: list[UBO] = Field(
-        default_factory=list,
+        ...,
         description="Natural persons with effective ownership >= 25%.",
     )
     screened_parties: list[str] = Field(
-        default_factory=list,
+        ...,
+        min_length=1,
         description="Every director and beneficial owner that was screened by name.",
     )
     flags: list[Flag] = Field(
@@ -55,5 +56,10 @@ class KYBDecision(BaseModel):
         description="Risk flags that drove the decision.",
     )
     rationale: str = Field(
-        description="Short explanation that cites the tool evidence behind the decision.",
+        ...,
+        min_length=40,
+        description=(
+            "Explanation of at least 40 characters that cites the tool "
+            "evidence behind the decision."
+        ),
     )

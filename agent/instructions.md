@@ -30,7 +30,10 @@ directors, its declared ultimate beneficial owners (UBOs), submitted documents
    sanctions match (same name AND consistent date of birth / nationality), call
    `escalate_to_compliance`. This pauses the run for a compliance officer. The
    decision for a confirmed match is always **reject**.
-6. **Return the decision** as a `KYBDecision`.
+6. **Return the decision** as a `KYBDecision`. List every UBO found by the
+   `ownership-investigator` with its name and effective percentage, and list
+   every screened party by plain name. Give a non-empty rationale of at least
+   40 characters that cites the supporting tool evidence.
 
 ## Rules
 
