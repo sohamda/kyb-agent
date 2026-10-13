@@ -19,11 +19,13 @@ def _key(jurisdiction: str, registration_number: str) -> str:
     return f"{jurisdiction}:{registration_number}"
 
 
-def _parse_ownership(value: Any) -> float:
-    # NOTE: parses the stake as a bare float. It ignores the record's
-    # ``ownership_unit`` and does not strip a trailing "%". Fractions (0-1) and
-    # percent strings ("35%") are therefore handled wrong.
-    return float(value)
+def _parse_ownership(value: Any, unit: str = "percent") -> float:
+    if isinstance(value, str):
+        value = value.strip()
+        if value.endswith("%"):
+            value = value[:-1].strip()
+    ownership = float(value)
+    return ownership * 100 if unit == "fraction" else ownership
 
 
 @tool(parse_docstring=True)
@@ -70,7 +72,7 @@ def compute_effective_ownership(jurisdiction: str, registration_number: str) -> 
         }
 
     persons: dict[tuple[str, str], dict[str, Any]] = {}
-    state = {"has_undisclosed": False}
+    state = {"has_undisclosed": False, "unparseable_stakes": []}
     chain_jurisdictions: set[str] = set()
 
     def walk(key: str, factor: float) -> None:
@@ -80,8 +82,22 @@ def compute_effective_ownership(jurisdiction: str, registration_number: str) -> 
         if not company.get("shareholders_disclosed", True):
             state["has_undisclosed"] = True
             return
+        unit = company.get("ownership_unit", "percent")
         for holder in company["shareholders"]:
-            stake = factor * _parse_ownership(holder["ownership"]) / 100
+            try:
+                ownership = _parse_ownership(holder["ownership"], unit)
+            except (TypeError, ValueError) as error:
+                state["unparseable_stakes"].append(
+                    {
+                        "company": key,
+                        "holder": holder.get("name"),
+                        "ownership": holder.get("ownership"),
+                        "ownership_unit": unit,
+                        "error": str(error),
+                    }
+                )
+                continue
+            stake = factor * ownership / 100
             if holder["type"] == "person":
                 person = persons.setdefault(
                     (holder["name"], holder["dob"]),
@@ -115,10 +131,14 @@ def compute_effective_ownership(jurisdiction: str, registration_number: str) -> 
         key=lambda p: -p["effective_ownership_pct"],
     )
     ubos = [p for p in resolved if p["effective_ownership_pct"] >= UBO_THRESHOLD_PCT]
-    return {
+    result = {
         "found": True,
         "ubos": ubos,
         "all_owners": resolved,
         "has_undisclosed_shareholders": state["has_undisclosed"],
         "chain_jurisdictions": sorted(chain_jurisdictions),
+        "unparseable_stakes": state["unparseable_stakes"],
     }
+    if state["unparseable_stakes"]:
+        result["error"] = "Some ownership stakes could not be parsed; ownership may be incomplete."
+    return result
