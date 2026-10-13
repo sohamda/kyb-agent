@@ -11,7 +11,7 @@ LLM Gateway) and serves as a working demo of the **LangSmith platform across the
 Development Lifecycle**: Build → Test → Deploy → Monitor → Improve, with Govern throughout.
 
 > Everything here runs on **synthetic data**, and the agent ships with a set of
-> **intentional defects** (see [`PLAN.md`](PLAN.md) §4.3) that surface in production
+> **intentional defects** (see [`PLAN.md`](demo-runbook/PLAN.md) §4.3) that surface in production
 > monitoring — they are the material for the Improve/Engine stage and must not be "fixed".
 
 ## Business process
@@ -47,7 +47,7 @@ compliance officer resumes.
 | [`agent/`](agent/) | The deployed Managed Deep Agent — main agent, subagents, tools, skills, decision policy. **Start here for implementation details** → [`agent/README.md`](agent/README.md) |
 | [`simulator/`](simulator/) | Synthetic-world generator (`generate_world.py`), production traffic simulator (`send_traffic.py`), and compliance reviewer bot (`reviewer_bot.py`) |
 | [`evals/`](evals/) | Offline experiments (datasets, evaluators, model-profile comparison) and online-evaluator reference implementations |
-| [`PLAN.md`](PLAN.md) | The full ADLC demo plan, design decisions, planted-defect catalog, and progress log |
+| [`demo-runbook/`](demo-runbook/) | [`PLAN.md`](demo-runbook/PLAN.md) — the full ADLC demo plan, design decisions, planted-defect catalog, and progress log; [`DEMO.md`](demo-runbook/DEMO.md) — the ~25-min demo runbook with per-stage links and a before-state snapshot |
 
 ## Quick start
 
@@ -63,4 +63,4 @@ cd agent && uv run python ../simulator/send_traffic.py --budget-usd 40 --shuffle
 ```
 
 See [`agent/README.md`](agent/README.md) for architecture, model profiles, tools, and the
-decision policy, and [`PLAN.md`](PLAN.md) for the end-to-end demo storyline.
+decision policy, and [`PLAN.md`](demo-runbook/PLAN.md) for the end-to-end demo storyline.

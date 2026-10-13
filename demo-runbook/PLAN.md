@@ -480,6 +480,7 @@ All four tool defects were checked against the generated data, and none of them 
 - [x] **Close-the-loop proven (dress-rehearsal, UNMERGED).** New harness: `evals/run_v2_experiment.py` + assertions evaluator; `target.py` now accepts `messages` inputs. On the `v2` split: **v1 (main 572e630, defects) = 0.000** on all assertions (every case `RecursionError` in `registry.py`), experiment `kyb-v2-v1-defects-d3a9a8a3`; **fix branch (608d537) = 1.000** on all (`must_return_kyb_decision`/`must_flag_opaque_ownership`/`must_recommend_enhanced_due_diligence`), experiment `kyb-v2-fix-branch-eda2a2b5`. Fix run used a throwaway git worktree so `main` keeps its defects. **PR #1 held unmerged for the live demo** (merge = issue completes).
 
 **Phase 7: Rehearse the demo** (section 7). Snapshot the "before" state (screenshots or saved experiment links) in case live systems drift.
+- [x] **`DEMO.md` runbook** created (2026-10-13): the ~25-min storyline with per-stage links + talking points, a **before-state snapshot** table (durable IDs/links for every stage), a morning-of reset/verify checklist, and live-demo gotchas. Remaining: capture UI screenshots as a visual fallback, and do a timed dry run.
 
 ## 7. Demo storyline (~25 min)
 

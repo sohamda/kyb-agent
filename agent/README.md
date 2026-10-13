@@ -15,7 +15,7 @@ When a business applies for an account, the agent:
 A confirmed sanctions match **pauses the run for a human compliance officer** before it finishes.
 
 > This README focuses on the agents and how they work. For the broader
-> build → test → deploy → monitor → improve story, see [`../PLAN.md`](../PLAN.md).
+> build → test → deploy → monitor → improve story, see [`../demo-runbook/PLAN.md`](../demo-runbook/PLAN.md).
 
 ---
 
@@ -280,7 +280,7 @@ plan, delegate to the three subagents, and return a `KYBDecision`.
 > Don't run `mda build` while `mda dev` is live — it rewrites the watched build venv and
 > crashes the dev server.
 
-Deploy and operate with `mda deploy` / `mda logs` / `mda delete`; see `../PLAN.md` for the
+Deploy and operate with `mda deploy` / `mda logs` / `mda delete`; see `../demo-runbook/PLAN.md` for the
 staging/prod split, Gateway policies, and the full lifecycle.
 
 ---
