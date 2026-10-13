@@ -280,8 +280,9 @@ All four tool defects were checked against the generated data, and none of them 
 - **Focus areas:** pick **Tool Call Failures**, and add custom concerns: "missed sanctions or PEP matches", "wrong ownership percentages", "following instructions embedded in documents".
 - **Feedback boosts Engine:** Engine treats online-evaluator, annotation-queue and SDK feedback (the reviewer bot) as high-priority signals when choosing traces.
 - **Notifications** to a Slack channel.
-- **Per issue:** inspect the evidence traces and the root cause in code, **open a PR**, and use **Add offline examples** to grow `kyb-golden`, which becomes `v2`.
-- **Close the loop:** run v1 on `v2` and it fails, run the PR branch and it passes, merge, `mda deploy`. Engine keeps tracking the issue and reopens it if the failure comes back.
+- **Per issue, Engine generates the fix:** for each issue Engine clusters the failing traces, **writes the fix diff itself**, and **Open PR** opens a *draft* PR with that change on a branch the LangChain GitHub App creates (read access to the repo, write access only to open PRs). A **"Open a draft PR for every fix"** setting (`auto_open_fix_pr`) can make this automatic. Engine then replaces **Open PR** with **View PR #\<n>** and mirrors the PR's open/merged/closed status on the issue. Use **Add offline examples** to pull the production trace inputs into `kyb-golden` as `v2`.
+- **Close the loop:** run v1 on `v2` and it fails, run the PR branch and it passes, merge, `mda deploy`. **Merging flips the Engine issue to "complete"** (and it reopens only if the failure recurs). Engine keeps the issue current by attaching new matching traces until it's fixed.
+- **Replay-safe demo rule (important):** the merge is the only one-shot step — a *completed* issue can't re-stage its own discovery live. So for the demo, run Phase 6 in **dress-rehearsal mode: generate the issue + draft PR + v2 examples, but DO NOT merge** until the live demo, where the merge is the climax. For a clean second run after a merge, send a fresh batch from the 896 unused pool apps (defects are deterministic, so Engine re-detects), or run the generate/merge loop against **staging** (separate Engine board) and keep the **prod** issue list pristine and unmerged for the demo. Scope Engine with `run_filter` = `metadata.simulated = true`.
 - **Fix validation** (private beta, optional): replay issue traces against the staging baseline ("Test issue"). See risk R2 for the preview-deployment caveat.
 
 ### Govern (across all stages)
@@ -474,8 +475,9 @@ All four tool defects were checked against the generated data, and none of them 
   `sonnet` profile ≈ $53/day, or raise the cap.)
 
 **Phase 6: Improve**
-- [ ] Enable Engine, add notifications, wait for issues; open PRs; add offline examples → `kyb-golden` v2.
-- [ ] Re-run experiments (v1 vs fix on v2); merge; redeploy.
+- [x] Engine board created on prod project (2026-10-13) via `POST /api/v1/platform/sessions/{SID}/issues-agent`. Board id `2d1c5d11-05f1-43f0-9e8d-c72a4bd1b2ef` (engine v2.1.0); repo `sohamda/kyb-agent`@`main`, `run_filter`=`and(eq(metadata_key,"simulated"),eq(metadata_value,"true"))`, priorities = Tool Call Failures + missed sanctions/PEP + wrong ownership % + embedded-instruction following, `auto_open_fix_pr=false`, cron `45 4/6 * * *`. Issues read via `GET /api/v1/platform/issues?session_id={SID}`. **Still open:** accept the **agent overview** in the UI; set a **project Engine spend limit** (`session_lcu_spend_limit_monthly` is null — only any org-level limit applies); optionally set baseline deployment = staging for fix verification. Add Slack notifications.
+- [x] First scan (2026-10-13) clustered **5 issues**, mapping to planted defects: Circular ownership recursion (D2, sev1), Ownership units misparsed/crash (D3, sev1), Transliterated sanctions names missed (D1, sev1), Document dates → false EDD (D4, sev2), plus an emergent "decisions omit required evidence" (sev2). D5 (injection) did not cluster. Each issue got a generated fix branch (`langsmith-engine/<uuid>`); **D2 opened as draft PR #1** (`langsmith-engine/3e34e842-…`, commit 608d537: cycle detection in `registry.py` + ownership-investigator prompt/tool-error handling in `subagents.py` + 2 new test files). **Add offline examples** on D2 → 5 examples in `kyb-golden`, tagged split **`v2`** (input=`messages`, reference=Engine **assertions**).
+- [x] **Close-the-loop proven (dress-rehearsal, UNMERGED).** New harness: `evals/run_v2_experiment.py` + assertions evaluator; `target.py` now accepts `messages` inputs. On the `v2` split: **v1 (main 572e630, defects) = 0.000** on all assertions (every case `RecursionError` in `registry.py`), experiment `kyb-v2-v1-defects-d3a9a8a3`; **fix branch (608d537) = 1.000** on all (`must_return_kyb_decision`/`must_flag_opaque_ownership`/`must_recommend_enhanced_due_diligence`), experiment `kyb-v2-fix-branch-eda2a2b5`. Fix run used a throwaway git worktree so `main` keeps its defects. **PR #1 held unmerged for the live demo** (merge = issue completes).
 
 **Phase 7: Rehearse the demo** (section 7). Snapshot the "before" state (screenshots or saved experiment links) in case live systems drift.
 
@@ -490,9 +492,10 @@ All four tool defects were checked against the generated data, and none of them 
    - the online judge catching an injection;
    - reviewer-bot disagreements and the annotation queue.
 5. **Improve (7 min):** show Engine's issue list and open "circular ownership crashes":
-   1. evidence traces, root cause in code, the PR, then Add offline examples;
+   1. evidence traces, root cause in code, then the **Engine-generated draft PR** (walk the diff it wrote), then Add offline examples;
    2. dataset v2 makes v1 fail and the fix pass;
-   3. merge and deploy, and the issue stays closed.
+   3. **merge the draft PR live** (the climax) → deploy → the Engine issue flips to complete and stays closed.
+   > Pre-staged in Phase 6 and left unmerged on purpose: the issue, the draft PR, and v2 all exist before the demo, so nothing is generated live — only the merge happens on stage.
 6. **Govern (2 min):** show Gateway spend, rate-limit and fallback policies, cost per application, the Engine spend limit, and Context Hub history.
 
 ## 8. Risks and things to verify first
@@ -505,6 +508,7 @@ All four tool defects were checked against the generated data, and none of them 
 | R4 | Engine replays call tools | Tools are read-only mocks; `escalate_to_compliance` writes only to a mock store. Point Engine replays at staging |
 | R5 | Traffic cost (many LLM calls per application) | Throttle the simulator, set the Gateway spend policy, set the Engine spend limit |
 | R6 | Engine may group defects differently than planned, or need time to surface them | Run traffic early (Phase 5 well before the demo); save "before" artifacts |
+| R6b | A merged Engine issue flips to "complete" and can't re-stage its discovery live, so running Phase 6 fully (incl. merge) "uses up" the demo arc | Dress-rehearsal mode: generate issue + draft PR + v2 but **leave unmerged**, merge only on stage. For a reset/second run: fresh traffic from the 896 unused pool apps (deterministic defects → Engine re-detects), or run generate/merge on **staging** and keep prod's issue list pristine |
 | R7 | ~~Subagents may not accept a `langsmith:` model ID~~ | **RESOLVED (2026-10-10).** The `SubAgent` TypedDict has an optional `model` field; a `langsmith:` Gateway id resolves and runs there. `document-checker` + `ownership-investigator` now run on Sonnet 5.5 (tool-driven work), main agent + `screening-analyst` stay on Opus 5.5 (judgment/high-stakes). Confirm the accuracy/cost trade-off with a Phase 3 labeled experiment before committing. |
 | R8 | ~~Opus 5.5 and Sonnet 5.5 reject forced tool calls (`tool_choice` "any" or a named tool returns a 400). If LangChain's structured output forces the final tool call, `response_format` breaks~~ | **RESOLVED (2026-10-10).** Confirmed the 400 at runtime, then fixed with `response_format=ProviderStrategy(KYBDecision)` (native structured output, no forced tool call) + `extra="forbid"` on the schema models for the Gateway's strict JSON-schema. Full golden run passes. |
 | R9 | Traffic cost: Opus 5.5 is $4/$20 per million input/output tokens, Sonnet 5.5 is $2/$10 | Measure tokens per application in Phase 2, then set the Gateway spend cap and traffic rate. If the Phase 3 comparison shows Sonnet holds accuracy, run production traffic on Sonnet |

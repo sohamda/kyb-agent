@@ -90,10 +90,15 @@ def make_target(profile_name: str) -> Callable[[dict], dict]:
             "configurable": {"thread_id": str(uuid.uuid4())},
             "recursion_limit": 150,
         }
-        state = graph.invoke(
-            {"messages": [{"role": "user", "content": _application_message(inputs["application"])}]},
-            config,
-        )
+        # Two input shapes: v1 golden examples carry {"application": {...}};
+        # Engine-generated v2 examples carry the deployed run's {"messages": [...]}.
+        if inputs.get("messages"):
+            init_messages = inputs["messages"]
+        else:
+            init_messages = [
+                {"role": "user", "content": _application_message(inputs["application"])}
+            ]
+        state = graph.invoke({"messages": init_messages}, config)
         escalated = False
         # Resume through any human-approval interrupts (approve the escalation).
         guard = 0
