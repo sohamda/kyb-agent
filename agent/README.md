@@ -120,7 +120,7 @@ services, so runs are deterministic and safe to replay.
 | Tool | Module | Used by | What it does |
 |---|---|---|---|
 | `lookup_company_registry` | `tools/registry.py` | document-checker, ownership-investigator | Fetch a company's registry record. |
-| `compute_effective_ownership` | `tools/registry.py` | ownership-investigator | Walk the ownership tree; return UBOs (≥ 25%) and ownership flags. |
+| `compute_effective_ownership` | `tools/registry.py` | ownership-investigator | Walk the ownership tree; return UBOs (≥ 25%), ownership flags, and any circular ownership keys. |
 | `screen_name` | `tools/screening.py` | screening-analyst | Match a person against the sanctions + PEP watchlists. |
 | `search_adverse_media` | `tools/screening.py` | screening-analyst | Find news articles mentioning a company or person. |
 | `check_document` | `tools/documents.py` | document-checker | Parse a document's expiry and report valid / expired / unverifiable. |

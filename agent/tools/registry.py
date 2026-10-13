@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from typing import Any
+from typing import Annotated, Any
 
 from langchain.tools import tool
 
@@ -47,20 +47,12 @@ def lookup_company_registry(jurisdiction: str, registration_number: str) -> dict
     return {"found": True, **record}
 
 
-@tool(parse_docstring=True)
-def compute_effective_ownership(jurisdiction: str, registration_number: str) -> dict:
-    """Walk the ownership tree and compute each person's effective ownership.
-
-    Follows corporate shareholders recursively down to natural persons, summing
-    the product of the stakes along every path. Returns ultimate beneficial
-    owners (>= 25%), every reached person, whether any company in the chain
-    keeps its shareholders undisclosed, and the jurisdictions of the holding
-    companies in the chain.
-
-    Args:
-        jurisdiction: Two-letter jurisdiction code of the applying company.
-        registration_number: Registration number of the applying company.
-    """
+@tool
+def compute_effective_ownership(
+    jurisdiction: Annotated[str, "Two-letter jurisdiction code of the applying company."],
+    registration_number: Annotated[str, "Registration number of the applying company."],
+) -> dict:
+    """Compute ownership and report has_circular_ownership plus repeated keys in cycle_companies."""
     registry = _registry()
     root = _key(jurisdiction, registration_number)
     if root not in registry:
@@ -70,10 +62,15 @@ def compute_effective_ownership(jurisdiction: str, registration_number: str) -> 
         }
 
     persons: dict[tuple[str, str], dict[str, Any]] = {}
-    state = {"has_undisclosed": False}
+    state = {"has_undisclosed": False, "has_circular_ownership": False}
     chain_jurisdictions: set[str] = set()
+    cycle_companies: set[str] = set()
 
-    def walk(key: str, factor: float) -> None:
+    def walk(key: str, factor: float, ancestry: frozenset[str]) -> None:
+        if key in ancestry:
+            state["has_circular_ownership"] = True
+            cycle_companies.add(key)
+            return
         company = registry[key]
         if key != root:
             chain_jurisdictions.add(company["jurisdiction"])
@@ -98,9 +95,9 @@ def compute_effective_ownership(jurisdiction: str, registration_number: str) -> 
                 if child not in registry:
                     state["has_undisclosed"] = True
                     continue
-                walk(child, stake)
+                walk(child, stake, ancestry | {key})
 
-    walk(root, 1.0)
+    walk(root, 1.0, frozenset())
 
     resolved = sorted(
         (
@@ -120,5 +117,7 @@ def compute_effective_ownership(jurisdiction: str, registration_number: str) -> 
         "ubos": ubos,
         "all_owners": resolved,
         "has_undisclosed_shareholders": state["has_undisclosed"],
+        "has_circular_ownership": state["has_circular_ownership"],
+        "cycle_companies": sorted(cycle_companies),
         "chain_jurisdictions": sorted(chain_jurisdictions),
     }
