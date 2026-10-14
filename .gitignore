@@ -3,6 +3,9 @@
 .env.*
 **/.env
 **/.env.*
+# ...but do track the template (no real keys in it).
+!.env.example
+!**/.env.example
 
 # Managed Deep Agent build output.
 .mda/

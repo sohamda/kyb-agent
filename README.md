@@ -47,7 +47,7 @@ compliance officer resumes.
 | [`agent/`](agent/) | The deployed Managed Deep Agent — main agent, subagents, tools, skills, decision policy. **Start here for implementation details** → [`agent/README.md`](agent/README.md) |
 | [`simulator/`](simulator/) | Synthetic-world generator (`generate_world.py`), production traffic simulator (`send_traffic.py`), and compliance reviewer bot (`reviewer_bot.py`) |
 | [`evals/`](evals/) | Offline experiments (datasets, evaluators, model-profile comparison) and online-evaluator reference implementations |
-| [`demo-runbook/`](demo-runbook/) | [`PLAN.md`](demo-runbook/PLAN.md) — the full ADLC demo plan, design decisions, planted-defect catalog, and progress log; [`DEMO.md`](demo-runbook/DEMO.md) — the ~25-min demo runbook with per-stage links and a before-state snapshot |
+| [`demo-runbook/`](demo-runbook/) | [`SETUP.md`](demo-runbook/SETUP.md) — **build this from scratch** on your own LangSmith workspace, step by step; [`PLAN.md`](demo-runbook/PLAN.md) — the full ADLC demo plan, design decisions, planted-defect catalog, and progress log; [`DEMO.md`](demo-runbook/DEMO.md) — the ~25-min demo runbook with per-stage links and a before-state snapshot |
 
 ## Quick start
 
@@ -62,5 +62,7 @@ cd agent && uv run python ../evals/run_experiment.py --profiles opus --split sam
 cd agent && uv run python ../simulator/send_traffic.py --budget-usd 40 --shuffle --rate-seconds 90
 ```
 
-See [`agent/README.md`](agent/README.md) for architecture, model profiles, tools, and the
-decision policy, and [`PLAN.md`](demo-runbook/PLAN.md) for the end-to-end demo storyline.
+To stand the whole thing up yourself on a fresh LangSmith workspace, follow
+[`demo-runbook/SETUP.md`](demo-runbook/SETUP.md). See [`agent/README.md`](agent/README.md)
+for architecture, model profiles, tools, and the decision policy, and
+[`PLAN.md`](demo-runbook/PLAN.md) for the end-to-end demo storyline.
