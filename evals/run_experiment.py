@@ -44,6 +44,8 @@ def main() -> None:
     ap.add_argument("--repetitions", type=int, default=1)
     ap.add_argument("--target-url", default=None,
                     help="If set, evaluate a deployed Agent Server instead of in-process.")
+    ap.add_argument("--require-sanctions-recall", action="store_true",
+                    help="Exit non-zero if any profile's sanctions_recall < 1.0 (CI gate).")
     args = ap.parse_args()
 
     client = Client()
@@ -73,6 +75,15 @@ def main() -> None:
         summary[profile] = _collect(result)
 
     _print_summary(summary)
+
+    # CI gate: sanctions screening is the non-negotiable control. Any profile that
+    # misses a sanctioned party fails the build.
+    if args.require_sanctions_recall:
+        failures = [p for p, s in summary.items() if s.get("sanctions_recall") != 1.0]
+        if failures:
+            print(f"\nFAIL: sanctions_recall < 1.0 for: {', '.join(failures)}")
+            raise SystemExit(1)
+        print("\nPASS: sanctions_recall == 1.0 for all profiles.")
 
 
 def _collect(result) -> dict:

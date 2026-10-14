@@ -1,0 +1,50 @@
+name: Deploy to LangSmith (prod)
+
+# Deploys the Managed Deep Agent to the prod Agent Server with `mda deploy`.
+#
+# Manual approval gate: the deploy job runs in the `production` GitHub Environment,
+# which must be configured with **required reviewers** (Settings -> Environments ->
+# production). On a push to main (or a manual run) the workflow pauses and waits for
+# a reviewer to approve before `mda deploy` runs — nothing ships automatically.
+#
+# Triggers only when agent/** changes so doc-only merges don't redeploy. Provider
+# keys (ANTHROPIC_API_KEY) and KYB_MODEL_PROFILE live as LangSmith workspace/
+# deployment secrets, not here; CI only needs LANGSMITH_API_KEY to authenticate
+# `mda deploy` to the control plane.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "agent/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-prod
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: mda deploy (prod)
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    environment:
+      name: production        # required reviewers here = the manual approval gate
+    env:
+      LANGSMITH_API_KEY: ${{ secrets.LANGSMITH_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v6
+
+      - name: Install dependencies
+        working-directory: agent
+        run: uv sync --python 3.12
+
+      - name: Deploy prod
+        working-directory: agent
+        run: uv run mda deploy --name kyb-agent-prod --deployment-type prod

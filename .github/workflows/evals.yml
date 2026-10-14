@@ -1,0 +1,65 @@
+name: PR eval gate
+
+# Runs the offline KYB evals on every pull request. The agent is built
+# **in-process** on the runner (no deploy), so the branch's code, instructions.md
+# and skills — including any planted defects — are exactly what gets scored.
+#
+# Two gates, both must pass:
+#   1. v2 close-the-loop  — Engine's circular-ownership assertions must all pass
+#      (1.0). A branch that still carries the defect scores ~0 and fails; Engine's
+#      fix branch scores 1.0 and turns this check green.
+#   2. sanctions recall    — the non-negotiable screening control must be 1.0 on
+#      the sample split for the default (opus) profile.
+#
+# Needs a LANGSMITH_API_KEY repo secret (experiments + Gateway auth). The Gateway
+# base URL / key are read from repo secrets too; the agent's own .env is gitignored
+# and absent in CI, so these env vars are the only source.
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: evals-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  evals:
+    name: offline evals
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      LANGSMITH_API_KEY: ${{ secrets.LANGSMITH_API_KEY }}
+      LANGSMITH_GATEWAY: ${{ secrets.LANGSMITH_GATEWAY }}
+      LANGSMITH_GATEWAY_API_KEY: ${{ secrets.LANGSMITH_GATEWAY_API_KEY }}
+      LANGSMITH_TRACING: "true"
+      LANGSMITH_PROJECT: kyb-agent-ci
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v6
+
+      - name: Install dependencies
+        working-directory: agent
+        run: uv sync --python 3.12
+
+      # Gate 1 — close the loop on Engine's v2 split (cheap: ~5 examples).
+      - name: v2 assertions (Engine close-the-loop)
+        working-directory: agent
+        run: >
+          uv run python ../evals/run_v2_experiment.py
+          --label "pr-${{ github.event.pull_request.number || github.run_id }}"
+          --fail-under 1.0
+
+      # Gate 2 — sanctions recall on the sample split (opus profile).
+      - name: sanctions recall (hard control)
+        working-directory: agent
+        run: >
+          uv run python ../evals/run_experiment.py
+          --profiles opus --split sample --max-concurrency 3
+          --require-sanctions-recall

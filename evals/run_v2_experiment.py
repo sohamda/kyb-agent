@@ -80,6 +80,8 @@ def main() -> None:
     ap.add_argument("--profile", default="opus", help="model profile (opus|sonnet|mixed)")
     ap.add_argument("--split", default="v2")
     ap.add_argument("--max-concurrency", type=int, default=3)
+    ap.add_argument("--fail-under", type=float, default=None,
+                    help="Exit non-zero if mean assertions_passed falls below this (CI gate).")
     args = ap.parse_args()
 
     client = Client()
@@ -109,6 +111,16 @@ def main() -> None:
     print("\n==== v2 assertion scores (mean) ====")
     for k in sorted(totals):
         print(f"  {k:42} {totals[k]/counts[k]:.3f}")
+
+    # CI gate: the close-the-loop check. v1 (defects intact) scores ~0 and fails;
+    # Engine's fix branch scores 1.0 and passes.
+    if args.fail_under is not None:
+        passed = (totals["assertions_passed"] / counts["assertions_passed"]
+                  if counts.get("assertions_passed") else 0.0)
+        if passed < args.fail_under:
+            print(f"\nFAIL: assertions_passed {passed:.3f} < required {args.fail_under:.3f}")
+            raise SystemExit(1)
+        print(f"\nPASS: assertions_passed {passed:.3f} >= required {args.fail_under:.3f}")
 
 
 if __name__ == "__main__":
