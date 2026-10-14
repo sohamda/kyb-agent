@@ -81,13 +81,27 @@ cp agent/.env.example agent/.env
 **Values must be unquoted.** A quoted `LANGSMITH_GATEWAY_API_KEY` is the most common
 first-run failure. `agent/.env` is gitignored.
 
-Smoke-test the Gateway path (one call to each model id should return with token usage):
+### Validate as you go
+
+`evals/check_setup.py` probes the live workspace (read-only) and reports a staged
+pass/warn/fail. **Run it after each stage below** — later checks SKIP cleanly until the
+thing they test exists, and it exits non-zero if any hard check fails.
 
 ```bash
 cd agent
-uv run python -c "from langchain.chat_models import init_chat_model as m; \
-print(m('langsmith:anthropic/claude-sonnet-5-5').invoke('ping').content[:40])"
+uv run python ../evals/check_setup.py                     # env, auth, Gateway, data, dataset
+uv run python ../evals/check_setup.py --skip-model        # same, without any Gateway spend
+# once deployed / Engine configured, add the targets you want checked:
+uv run python ../evals/check_setup.py \
+    --deployment-url https://kyb-agent-prod-<...>.us.langgraph.app \
+    --session-id <prod-tracing-session-id> --tenant-id <workspace-tenant-id>
 ```
+
+It covers: the 5 env keys (and flags quoted values), LangSmith auth, a live **Gateway**
+model call (the `424` ANTHROPIC_API_KEY check), the generated data files, the `kyb-golden`
+dataset + its `sample`/`v2` splits, deployment reachability + the `kyb-agent` assistant,
+and (optional) the Engine board. After this first run you should see the env, auth, and
+Gateway checks pass; the rest fill in as you work through the stages.
 
 ---
 
