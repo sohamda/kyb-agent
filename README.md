@@ -47,7 +47,7 @@ compliance officer resumes.
 | [`agent/`](agent/) | The deployed Managed Deep Agent — main agent, subagents, tools, skills, decision policy. **Start here for implementation details** → [`agent/README.md`](agent/README.md) |
 | [`simulator/`](simulator/) | Synthetic-world generator (`generate_world.py`), production traffic simulator (`send_traffic.py`), and compliance reviewer bot (`reviewer_bot.py`) |
 | [`evals/`](evals/) | Offline experiments (datasets, evaluators, model-profile comparison) and online-evaluator reference implementations |
-| [`demo-runbook/`](demo-runbook/) | [`SETUP.md`](demo-runbook/SETUP.md) — **build this from scratch** on your own LangSmith workspace, step by step; [`PLAN.md`](demo-runbook/PLAN.md) — the full ADLC demo plan, design decisions, planted-defect catalog, and progress log; [`DEMO.md`](demo-runbook/DEMO.md) — the ~25-min demo runbook with per-stage links and a before-state snapshot |
+| [`demo-runbook/`](demo-runbook/) | [`SETUP.md`](demo-runbook/SETUP.md) — **build this from scratch** on your own LangSmith workspace, step by step; [`PLAN.md`](demo-runbook/PLAN.md) — the full ADLC demo plan, design decisions, planted-defect catalog, and progress log; [`DEMO.md`](demo-runbook/DEMO.md) — the ~25-min demo runbook with per-stage links and a before-state snapshot; [`GLOSSARY.md`](demo-runbook/GLOSSARY.md) — the KYB/compliance terms (EDD, PEP, UBO, sanctions, …) tied to the agent's flags and tools |
 
 ## Quick start
 

@@ -10,7 +10,8 @@ reproduce the running system: build → test → deploy → monitor → improve 
 > stages. **Do not "fix" them in `main`.** The guide tells you where they surface.
 
 For the design rationale behind each step, read [`PLAN.md`](PLAN.md); for the ~25-minute
-live walkthrough, read [`DEMO.md`](DEMO.md). This file is the recipe.
+live walkthrough, read [`DEMO.md`](DEMO.md); for the compliance terms (KYB, EDD, PEP, UBO,
+sanctions, …) read [`GLOSSARY.md`](GLOSSARY.md). This file is the recipe.
 
 ---
 
