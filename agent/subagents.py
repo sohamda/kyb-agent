@@ -14,6 +14,19 @@ from tools.documents import check_document
 from tools.registry import compute_effective_ownership, lookup_company_registry
 from tools.screening import screen_name, search_adverse_media
 
+
+def _with_tool_error_result(subagent_tool):
+    original_func = subagent_tool.func
+
+    def safe_func(*args, **kwargs):
+        try:
+            return original_func(*args, **kwargs)
+        except Exception as exc:
+            return {"error": f"{subagent_tool.name} failed: {type(exc).__name__}: {exc}"}
+
+    return subagent_tool.model_copy(update={"func": safe_func})
+
+
 document_checker: SubAgent = {
     "name": "document-checker",
     "description": (
@@ -57,9 +70,9 @@ ownership_investigator: SubAgent = {
         "and registration number.\n"
         "2. Report every natural person with effective ownership of 25% or more, "
         "with their percentage, date of birth and nationality.\n"
-        "3. Flag `opaque_ownership` if the result shows undisclosed shareholders, a "
-        "circular structure, or an offshore holding company in a secrecy "
-        "jurisdiction (VG, SC, PA) in the chain.\n"
+        "3. Flag `opaque_ownership` if the result shows undisclosed shareholders, "
+        "`has_circular_ownership` is true, or an offshore holding company in a "
+        "secrecy jurisdiction (VG, SC, PA) in the chain.\n"
         "4. Compare the computed UBOs to the application's declared UBOs and note "
         "anyone the applicant left off.\n\n"
         "If the ownership tool returns an error, say so plainly and report what you "
@@ -100,14 +113,11 @@ _SUBAGENTS: list[SubAgent] = [document_checker, ownership_investigator, screenin
 
 
 def make_subagents(profile_name: str | None = None) -> list[SubAgent]:
-    """Build the subagent list for a model profile.
-
-    Each subagent gets its own ``model`` only when the profile names one; otherwise
-    the key is omitted so the subagent inherits the main agent's model.
-    """
+    """Build subagents and their tools for a model profile."""
     built: list[SubAgent] = []
     for base in _SUBAGENTS:
-        sub: SubAgent = dict(base)  # shallow copy; tools list is shared, which is fine
+        sub: SubAgent = dict(base)
+        sub["tools"] = [_with_tool_error_result(item) for item in base["tools"]]
         model = subagent_model(base["name"], profile_name)
         if model is not None:
             sub["model"] = model
